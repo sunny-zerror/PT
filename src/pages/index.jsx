@@ -1,6 +1,6 @@
 import Hero from "@/components/home/Hero";
 
-const Home = ({ special }) => {
+const Home = () => {
 
   return (
     <>
