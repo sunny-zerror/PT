@@ -81,7 +81,7 @@ const FrameA = () => {
                 end: "+=4000",
                 scrub: true,
                 pin: true,
-                markers: true,
+                // markers: true,
             },
         });
 
@@ -145,14 +145,12 @@ const FrameA = () => {
         const updatePercent = () => {
             if (percent >= 100) return;
 
-            const increment = Math.floor(Math.random() * 10) + 2; // random between 2–11
+            const increment = Math.floor(Math.random() * 10) + 2;
             percent = Math.min(100, percent + increment);
 
-            // Format to 2-digit (e.g., 01, 08, 25, 99, 100)
             el.textContent = percent.toString().padStart(2, "0");
 
-            // Call again after a random time
-            const delay = Math.random() * 300; // 100–400ms
+            const delay = Math.random() * 300;
             setTimeout(updatePercent, delay);
         };
 
