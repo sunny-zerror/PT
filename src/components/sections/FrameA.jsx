@@ -224,11 +224,11 @@ const FrameA = () => {
                 <div className=" slide_box_upside  w-[40vw]   absolute text-white   bottom-[-150%]  right-0 ">
                     <h2 className='text-xl mb-6'>What I believe and follow</h2>
                     <h2 className='text-xl'>Brand as a Living System</h2>
-                    <p className='text-5xl leading-none mb-10 mix_light'>A brand isn’t just a logo — it’s a living, evolving ecosystem. The strongest ones grow with their audience and stay rooted in purpose.</p>
+                    <p className='text-4xl leading-none mb-10 mix_light'>A brand isn’t just a logo — it’s a living, evolving ecosystem. The strongest ones grow with their audience and stay rooted in purpose.</p>
                     <h2 className='text-xl'>Story and Structure</h2>
-                    <p className='text-5xl leading-none mb-10 mix_light'>Story creates meaning. Structure creates momentum. I build brands where emotion and systems work together — with intention, not accident.</p>
+                    <p className='text-4xl leading-none mb-10 mix_light'>Story creates meaning. Structure creates momentum. I build brands where emotion and systems work together — with intention, not accident.</p>
                     <h2 className='text-xl'>Ethical Innovation</h2>
-                    <p className='text-5xl leading-none mb-10 mix_light'>Innovation without intention is just noise. I design with awareness — of people, context, and long-term impact</p>
+                    <p className='text-4xl leading-none mb-10 mix_light'>Innovation without intention is just noise. I design with awareness — of people, context, and long-term impact</p>
                 </div>
             </div>
         </div>
