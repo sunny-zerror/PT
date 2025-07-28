@@ -1,8 +1,11 @@
 import React from 'react'
+import FrameA from '../sections/FrameA'
 
 const Hero = () => {
   return (
-    <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nam reiciendis commodi recusandae voluptas beatae incidunt blanditiis quisquam non ab!</p></div>
+    <div>
+      <FrameA/>
+    </div>
   )
 }
 

@@ -25,7 +25,9 @@
 
 * {
   scroll-behavior: smooth;
-  color: #464646;
+}
+body{
+  background-color: #FFFBF3;
 }
 .mix_light{
   font-family: mixta-ess-sharpit-light;
@@ -52,9 +54,4 @@ h2{
 }
 .scrollbar_hide::-webkit-scrollbar {
   display: none;
-}
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
