@@ -78,7 +78,7 @@ const FrameA = () => {
             scrollTrigger: {
                 trigger: main_Ref.current,
                 start: "top top",
-                end: "+=4000",
+                end: "+=8000",
                 scrub: true,
                 pin: true,
                 // markers: true,
@@ -132,6 +132,105 @@ const FrameA = () => {
             duration: 2,
         }, "pin3");
 
+        tl.to(".profile_pic", {
+            left: "0%",
+            duration: 2,
+        }, "pin4");
+
+        tl.to(".frameB", {
+            left: "0%",
+            duration: 2,
+        }, "pin4");
+        tl.fromTo(".spn_slide", {
+            top: "35%",
+        }, {
+            top: "-150%",
+            duration: 1.8,
+        }, "pin5");
+        tl.fromTo(".spn_img_slider", {
+            top: "0%",
+        }, {
+            top: "-175%",
+            duration: 1.8,
+        }, "pin5");
+
+        tl.to(".spn_1", {
+            opacity: 0.05,
+            delay: 0.1,
+            duration: .05,
+        }, "pin5");
+        tl.fromTo(".spn_2", {
+            opacity: 0.05,
+        }, {
+            opacity: 1,
+            delay: 0.15,
+            duration: .05,
+        }, "pin5");
+
+        tl.to(".spn_2", {
+            opacity: 0.05,
+            duration: .05,
+            delay: 0.35,
+        }, "pin5");
+        tl.fromTo(".spn_3", {
+            opacity: 0.05,
+        }, {
+            opacity: 1,
+            delay: 0.35,
+            duration: .05,
+        }, "pin5");
+        tl.to(".spn_3", {
+            opacity: 0.05,
+            duration: .05,
+            delay: 0.65,
+        }, "pin5");
+        tl.fromTo(".spn_4", {
+            opacity: 0.05,
+        }, {
+            opacity: 1,
+            delay: 0.65,
+            duration: .05,
+        }, "pin5");
+        tl.to(".spn_4", {
+            opacity: 0.05,
+            duration: .05,
+            delay: 0.95,
+        }, "pin5");
+        tl.fromTo(".spn_5", {
+            opacity: 0.05,
+        }, {
+            opacity: 1,
+            delay: 0.95,
+            duration: .05,
+        }, "pin5");
+
+        tl.to(".frame_slider", {
+            top: 0,
+            duration: 2
+        }, "pin6")
+
+        tl.to(".frame_slider", {
+            top: "-30%",
+            duration: 2
+        }, "pin7")
+
+        tl.to(".frame_slide_1", {
+            transform: "translateY(-100vh)",
+            duration: 4
+        }, "pin7")
+        tl.to(".frame_slide_2", {
+            transform: "translateY(-50vh)",
+            duration: 4
+        }, "pin7")
+        tl.to(".frame_slide_3", {
+            transform: "translateY(-110vh)",
+            duration: 4
+        }, "pin7")
+        tl.to(".frame_slide_4", {
+            transform: "translateY(-80vh)",
+            duration: 4
+        }, "pin7")
+
 
 
 
@@ -168,14 +267,15 @@ const FrameA = () => {
                     className=" bg-[#FFFBF3] absolute w-full h-screen z-[9] center flex-col absolute_center"
                 >
                 </div>
+
                 <div
                     ref={logoRef}
-                    className="absolute w-full absolute_center center z-[9] flex-col ">
-                    <div className=" logo_div  center  w-full">
-                        <img className="w-full" src="/logos/MainLogo.png" alt="" />
+                    className="absolute w-full absolute_center  center z-[9] flex-col ">
+                    <div className=" logo_div  center   w-full">
+                        <img className="w-[94.8%]" src="/logos/new logo.svg" alt="" />
                     </div>
 
-                    <div className=" short_desc w-full px-10  overflow-hidden text-[16px] flex items-center justify-between">
+                    <div className=" short_desc w-full px-10 py-2  overflow-hidden text-[16px] flex items-center justify-between">
                         <p>3D ideas, big projects</p>
                         <h2>Antoine</h2>
                         <p>Freelance 3D Graphic Designer</p>
@@ -230,6 +330,157 @@ const FrameA = () => {
                     <h2 className='text-xl'>Ethical Innovation</h2>
                     <p className='text-4xl leading-none mb-10 mix_light'>Innovation without intention is just noise. I design with awareness — of people, context, and long-term impact</p>
                 </div>
+
+                <div className=" frameB  w-full h-screen bg-[#FFFBF3] absolute top-0 left-[100%]">
+
+                    <div className=" absolute top-0 left-0 spn_slide w-[75%]">
+                        <h2 className='text-black text-[4.5vw] p-4 leading-none'>
+                            <span className='spn_1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur repudiandae sit perspiciatis dolore. Vel, aspernatur? Itaque, alias. Velit, quibusdam.</span> &nbsp;
+                            <span className='spn_2 opacity-[.1]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur repudiandae sit perspiciatis dolore. Vel, aspernatur? Itaque, alias. Velit, quibusdam.</span> &nbsp;
+                            <span className='spn_3 opacity-[.1]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur repudiandae sit perspiciatis dolore. Vel, aspernatur? Itaque, alias. Velit, quibusdam.</span> &nbsp;
+                            <span className='spn_4 opacity-[.1]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur repudiandae sit perspiciatis dolore. Vel, aspernatur? Itaque, alias. Velit, quibusdam.</span> &nbsp;
+                            <span className='spn_5 opacity-[.1]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur repudiandae sit perspiciatis dolore. Vel, aspernatur? Itaque, alias. Velit, quibusdam.</span> &nbsp;
+                        </h2>
+                    </div>
+
+                    <div className=" spn_img_slider p-5 w-[25%] text-black absolute right-0 top-0">
+                        <div className="w-full">
+                            <div className="h-[60vh] w-full">
+                                <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/livre.jpg" alt="" />
+                            </div>
+                            <h2 className='capitalize text-xl'>Project Name</h2>
+                        </div>
+                        <div className="w-full mt-10">
+                            <div className="h-[60vh] w-full">
+                                <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/1.webp" alt="" />
+                            </div>
+                            <h2 className='capitalize text-xl'>Project Name</h2>
+                        </div>
+                        <div className="w-full mt-10">
+                            <div className="h-[60vh] w-full">
+                                <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/poffy.jpg" alt="" />
+                            </div>
+                            <h2 className='capitalize text-xl'>Project Name</h2>
+                        </div>
+                        <div className="w-full mt-10">
+                            <div className="h-[60vh] w-full">
+                                <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                            </div>
+                            <h2 className='capitalize text-xl'>Project Name</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="frame_slider absolute top-[100%]  left-0 w-full  bg-[#FFFBF3] z-[10]">
+
+                    <div className="w-full h-[30vh] text-black center flex-col text-center">
+                        <p className='text-6xl uppercase'>Projects</p>
+                        <h2 className='text-xl w-[60%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, maiores!</h2>
+                    </div>
+
+                    <div className="w-full grid grid-cols-4 gap-5 px-5 overflow-hidden">
+                        <div className=" frame_slide_1  w-full h-screen space-y-10">
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                        </div>
+                        <div className=" frame_slide_2  w-full h-screen space-y-10 translate-y-[-10vh]">
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                        </div>
+                        <div className=" frame_slide_3  w-full h-screen space-y-10 translate-y-[-5vh]">
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                        </div>
+                        <div className=" frame_slide_4  w-full h-screen space-y-10 translate-y-[-15vh]">
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                            <div className="w-full ">
+                                <div className="h-[60vh] w-full">
+                                    <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                </div>
+                                <h2 className='capitalize leading-none mt-2 text-2xl'>Project Name</h2>
+                                <h2 className='text-base capitalize opacity-80 leading-none'>Lorem ipsum dolor sit amet.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
