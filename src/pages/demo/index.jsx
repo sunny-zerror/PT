@@ -1,49 +1,14 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import React from 'react'
 
-gsap.registerPlugin(ScrollTrigger);
-
-
-const index = () => {
-  const vectorRef = useRef(null)
-
-  // useEffect(() => {
-
-  //   var tl = gsap.timeline({
-  //     scrollTrigger:{
-  //       trigger:".cont",
-  //       start:"top top",
-  //       markers:true,
-  //       pin:true,
-  //       scrub:1,
-  //       end:"+=3000"
-  //     }
-  //   })
-  //   tl.to(vectorRef.current, {
-  //     width: "30vw",
-  //     ease: "none",
-  //     duration: 1
-  //   })
-
-  // }, [])
-
-
-
-
-
+const Index = () => {
   return (
-    <div className='center w-full bg-blue-100 overflow-hidden h-screen'>
-      <div className=" cont center ">
-        <div className="w-[100vw] h-[100vh] bg-black -rotate-90 center ">
-          <div className="size-20 bg-green-700">
-            <p>kcc;</p>
-          </div>
-        </div>
+    <div>
+      <div className="w-full h-screen grid grid-cols-[70%_30%]">
+        <div className="bg-red-500">Column 1 (70%)</div>
+        <div className="bg-blue-500">Column 2 (30%)</div>
       </div>
     </div>
   )
 }
 
-export default index
-
+export default Index

@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const FrameA = () => {
     const main_Ref = useRef(null);
     const logoRef = useRef(null);
+    const logoRef2 = useRef(null);
     const clipRef = useRef(null);
 
     useEffect(() => {
@@ -89,6 +90,10 @@ const FrameA = () => {
             top: "20%",
             ease: "ease.out"
         }, "pin");
+        tl.to(logoRef2.current, {
+            top: "20%",
+            ease: "ease.out"
+        }, "pin");
 
         tl.to(clipRef.current, {
             clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
@@ -117,6 +122,10 @@ const FrameA = () => {
         }, "pin2");
 
         tl.to(logoRef.current, {
+            top: "-20%",
+            ease: "ease.out"
+        }, "pin2");
+        tl.to(logoRef2.current, {
             top: "-20%",
             ease: "ease.out"
         }, "pin2");
@@ -233,16 +242,16 @@ const FrameA = () => {
 
         tl.to(".cont", {
             width: "20vh",
-            height:"20vh",
+            height: "20vh",
             clipPath: "shape(nonzero from 75.26% 81.49%, line to 52.41% 81.49%, curve to 50.71% 82.93% with 50.71% 81.49% / 50.71% 81.49%, curve to 50.7% 98.64% with 50.71% 88.17% / 50.71% 93.41%, curve to 50.07% 100% with 50.7% 99.16% / 50.96% 99.95%, curve to 49.2% 98.73% with 49.24% 100.04% / 49.29% 99.25%, curve to 44.22% 84.47% with 48.4% 93.75% / 46.64% 89.03%, curve to 36.7% 74.09% with 42.26% 80.73% / 39.73% 77.24%, curve to 21.94% 63.3% with 32.56% 69.76% / 27.56% 66.11%, curve to 1.2% 57.08% with 15.46% 60.09% / 8.53% 58.09%, curve to 0% 56.43% with 0.68% 57.01% / -0.05% 57.1%, curve to 1.31% 55.9% with 0.06% 55.79% / 0.79% 55.9%, curve to 33.42% 55.9% with 12.01% 55.89% / 22.72% 55.89%, curve to 36.1% 55.9% with 34.32% 55.9% / 35.21% 55.9%, curve to 36.76% 55.69% with 36.34% 55.9% / 36.66% 55.96%, curve to 36.45% 55.21% with 36.83% 55.48% / 36.58% 55.35%, curve to 22.05% 44.68% with 32.4% 50.92% / 27.53% 47.46%, curve to 7.03% 39.44% with 17.36% 42.3% / 12.3% 40.54%, curve to 1.03% 38.43% with 5.05% 39% / 3.05% 38.67%, curve to 0.09% 37.8% with 0.57% 38.38% / 0.09% 38.32%, curve to 1.07% 37.27% with 0.09% 37.22% / 0.63% 37.29%, curve to 2.03% 37.27% with 1.39% 37.26% / 1.71% 37.27%, line to 35.2% 37.27%, curve to 36.05% 37.27% with 35.48% 37.27% / 35.77% 37.28%, curve to 36.74% 37.09% with 36.3% 37.26% / 36.62% 37.34%, curve to 36.43% 36.52% with 36.86% 36.84% / 36.59% 36.68%, curve to 30.63% 31.36% with 34.64% 34.69% / 32.7% 32.96%, curve to 18.49% 24.36% with 26.96% 28.57% / 22.87% 26.21%, curve to 1.29% 19.8% with 13.03% 22.06% / 7.32% 20.48%, curve to 0.82% 19.72% with 1.13% 19.79% / 0.98% 19.76%, curve to 0.09% 19.08% with 0.44% 19.63% / 0.06% 19.51%, curve to 0.9% 18.52% with 0.12% 18.65% / 0.5% 18.55%, curve to 1.95% 18.5% with 1.26% 18.5% / 1.6% 18.5%, line to 47.75% 18.5%, curve to 49.39% 17.09% with 49.39% 18.5% / 49.39% 18.5%, line to 49.39% 2.05%, curve to 49.39% 1.3% with 49.39% 1.8% / 49.36% 1.55%, curve to 49.99% 0% with 49.44% 0.81% / 49.17% 0.06%, curve to 50.73% 1.19% with 50.88% -0.06% / 50.62% 0.71%, curve to 52.3% 7.44% with 51.21% 3.29% / 51.62% 5.38%, curve to 58.13% 19.42% with 53.66% 11.63% / 55.62% 15.66%, curve to 64.58% 27.13% with 59.97% 22.18% / 62.13% 24.76%, curve to 77.92% 36.6% with 68.47% 30.88% / 72.88% 34.08%, curve to 92.85% 41.81% with 82.59% 38.94% / 87.61% 40.69%, curve to 99.12% 42.89% with 94.93% 42.25% / 97.02% 42.56%, curve to 100% 43.47% with 99.54% 42.96% / 100.01% 42.98%, curve to 99.04% 44.07% with 99.99% 44% / 99.5% 44.04%, curve to 98.08% 44.08% with 98.72% 44.09% / 98.4% 44.08%, line to 64.82% 44.08%, curve to 63.96% 44.08% with 64.53% 44.08% / 64.24% 44.08%, curve to 63.36% 44.25% with 63.74% 44.09% / 63.48% 44.04%, curve to 63.62% 44.75% with 63.25% 44.47% / 63.48% 44.6%, curve to 69.96% 50.37% with 65.52% 46.79% / 67.65% 48.67%, curve to 85.45% 58.44% with 74.59% 53.77% / 79.82% 56.5%, curve to 98.81% 61.51% with 89.75% 59.93% / 94.23% 60.96%, line to 99.09% 61.54%, curve to 99.98% 62.2% with 99.55% 61.6% / 100.04% 61.67%, curve to 98.95% 62.71% with 99.92% 62.74% / 99.39% 62.69%, curve to 98% 62.71% with 98.63% 62.72% / 98.31% 62.71%, curve to 64.64% 62.72% with 86.88% 62.71% / 75.76% 62.71%, curve to 63.34% 62.95% with 64.19% 62.72% / 63.56% 62.49%, curve to 64.01% 63.88% with 63.16% 63.33% / 63.73% 63.59%, curve to 73.86% 71.71% with 66.9% 66.84% / 70.21% 69.47%, curve to 85.25% 77.08% with 77.41% 73.86% / 81.24% 75.66%, curve to 97.46% 80.08% with 89.19% 78.49% / 93.31% 79.32%, curve to 99.34% 80.31% with 98.08% 80.19% / 98.72% 80.22%, curve to 99.98% 80.9% with 99.71% 80.36% / 100.03% 80.51%, curve to 99.24% 81.45% with 99.92% 81.26% / 99.62% 81.42%, curve to 98.19% 81.48% with 98.89% 81.48% / 98.54% 81.49%, line to 75.26% 81.49%, close)",
             duration: 2,
-            backgroundColor:"#18293A"
-        },"pin8")
-        tl.to(".cont_child",{
+            backgroundColor: "#18293A"
+        }, "pin8")
+        tl.to(".cont_child", {
             opacity: 0,
             duration: 1,
-            delay:1
-        },"pin8")
+            delay: 1
+        }, "pin8")
 
 
 
@@ -277,23 +286,26 @@ const FrameA = () => {
                     style={{
                         clipPath: "polygon(0 0, 100% 0, 100% 70%, 0 70%)",
                     }}
-                    className=" bg-[#FFFBF3] absolute w-full h-screen z-[9] center flex-col absolute_center"
+                    className=" bg-[#FFFBF3] absolute w-full h-screen z-[10] center flex-col absolute_center"
                 >
+                    <div
+                        ref={logoRef}
+                        className=" absolute w-full absolute_center">
+                        <div className=" logo_div  center   w-full">
+                            <img className="w-[94.8%]" src="/logos/Logo_Dark.svg" alt="" />
+                        </div>
+
+                        <div className=" short_desc w-full px-10 py-2  overflow-hidden text-[16px] flex items-center justify-between">
+                            <p>3D ideas, big projects</p>
+                            <h2>Antoine</h2>
+                            <p>Freelance 3D Graphic Designer</p>
+                            <h2 className="text-[12px]">Based in Toulouse, France</h2>
+                        </div>
+                    </div>
                 </div>
-
+               
                 <div
-                    ref={logoRef}
-                    className="absolute w-full absolute_center  center z-[9] flex-col ">
-                    <div className=" logo_div  center   w-full">
-                        <img className="w-[94.8%]" src="/logos/new logo.svg" alt="" />
-                    </div>
-
-                    <div className=" short_desc w-full px-10 py-2  overflow-hidden text-[16px] flex items-center justify-between">
-                        <p>3D ideas, big projects</p>
-                        <h2>Antoine</h2>
-                        <p>Freelance 3D Graphic Designer</p>
-                        <h2 className="text-[12px]">Based in Toulouse, France</h2>
-                    </div>
+                    className="absolute w-full absolute_center  center z-[10] flex-col ">
 
                     <div className="loader_left pointer-events-none left-[25%]  text-xl absolute top-1/2 translate-y-[-50%]">
                         <p>Loading</p>
@@ -304,7 +316,7 @@ const FrameA = () => {
                         </p>
                     </div>
 
-                    <div className=" pointer-events-none percent_inc absolute top-[62%] left-[50%] translate-x-[-50%]  ">
+                    <div className=" pointer-events-none percent_inc absolute top-[62%] translate-y-[100%] left-[50%] translate-x-[-50%]  ">
                         <p>
                             [<span className="percent inline-block text-center "> 00 </span>%]
                         </p>
@@ -316,8 +328,23 @@ const FrameA = () => {
                 </div>
 
                 <div
-                    className="clip_container overflow-hidden absolute top-0 left-1/2 translate-x-[-50%] w-full h-full flex items-center justify-center"
+                    className="clip_container overflow-hidden absolute top-0 left-1/2 translate-x-[-50%] w-full h-full center "
                 >
+                    <div
+                        ref={logoRef2}
+                        className=" absolute absolute_center w-full z-[9]">
+
+                        <div className=" logo_div  center   w-full">
+                            <img className="w-[94.8%]" src="/logos/Logo_Light.svg" alt="" />
+                        </div>
+
+                        <div className=" short_desc w-full px-10 py-2 text-[#fffbf3]  overflow-hidden text-[16px] flex items-center justify-between">
+                            <p>3D ideas, big projects</p>
+                            <h2>Antoine</h2>
+                            <p>Freelance 3D Graphic Designer</p>
+                            <h2 className="text-[12px]">Based in Toulouse, France</h2>
+                        </div>
+                    </div>
                     <img
                         className="object-cover w-full h-full"
                         src="https://images.prismic.io/archi-malin/Z2oIO5bqstJ98zX3_BLEUFINAL.jpg?auto=format%2Ccompress&rect=0%2C269%2C1128%2C731&w=2200&h=1425"
