@@ -24,13 +24,13 @@ const FrameA = () => {
 
         gsap.to(".loader_left", {
             left: "3%",
-            duration: 2,
+            duration: 3.5,
             ease: "expo.inOut",
             delay: 1
         })
         gsap.to(".loader_right", {
             right: "3%",
-            duration: 2,
+            duration: 3.5,
             ease: "expo.inOut",
             delay: 1
         })
@@ -38,22 +38,22 @@ const FrameA = () => {
         gsap.to(".logo_div", {
             y: 0,
             scale: 1,
-            duration: 2,
+            duration: 1.8,
             ease: "expo.inOut",
             delay: 4
         })
         gsap.to(".clip_container", {
-            top: "-15%",
-            duration: 2,
+            top: "-20%",
+            duration: 1.8,
             ease: "expo.inOut",
-            delay: 2
+            delay: 2.2
         })
         gsap.to(".clip_container", {
             top: 0,
             width: "100%",
             duration: 2,
             ease: "expo.inOut",
-            delay: 4
+            delay: 3.9
         })
         gsap.to(".loader_left, .loader_right, .percent_inc", {
             opacity: 0,
@@ -79,18 +79,19 @@ const FrameA = () => {
             scrollTrigger: {
                 trigger: main_Ref.current,
                 start: "top top",
-                end: "+=8000",
+                end: window.innerHeight * 20,
                 scrub: true,
                 pin: true,
+                pinSpacing: true,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
                 // markers: true,
-            },
+            }
+
         });
 
-        tl.to(logoRef.current, {
-            top: "20%",
-            ease: "ease.out"
-        }, "pin");
-        tl.to(logoRef2.current, {
+
+        tl.to([logoRef.current, logoRef2.current], {
             top: "20%",
             ease: "ease.out"
         }, "pin");
@@ -102,22 +103,26 @@ const FrameA = () => {
 
         tl.to(".profile_pic", {
             bottom: "0%",
+            duration: 1,
             ease: "ease.out"
         });
 
         tl.to(".slide_box", {
             left: "50%",
+            duration: 1,
             ease: "ease.out"
         });
 
         tl.to(".slide_box", {
             left: "12.5%",
+            duration: 1,
             ease: "ease.out"
         }, "pin2");
 
         tl.to(".profile_pic", {
             height: "100vh",
             width: "100%",
+            duration: 1,
             ease: "ease.out"
         }, "pin2");
 
@@ -133,12 +138,13 @@ const FrameA = () => {
 
         tl.to(".slide_box", {
             left: "-13%",
-            ease: "ease.out"
+            ease: "ease.out",
+            duration: 1,
         }, "pin3");
 
         tl.to(".slide_box_upside", {
             bottom: "100%",
-            duration: 2,
+            duration: 3,
         }, "pin3");
 
         tl.to(".profile_pic", {
@@ -154,12 +160,6 @@ const FrameA = () => {
             top: "35%",
         }, {
             top: "-150%",
-            duration: 1.8,
-        }, "pin5");
-        tl.fromTo(".spn_img_slider", {
-            top: "0%",
-        }, {
-            top: "-175%",
             duration: 1.8,
         }, "pin5");
 
@@ -212,6 +212,14 @@ const FrameA = () => {
             delay: 0.95,
             duration: .05,
         }, "pin5");
+
+        tl.fromTo(".spn_img_slider", {
+            top: "0%",
+        }, {
+            top: "-175%",
+            duration: 3,
+        }, "pin5.5");
+
 
         tl.to(".frame_slider", {
             top: 0,
@@ -303,7 +311,7 @@ const FrameA = () => {
                         </div>
                     </div>
                 </div>
-               
+
                 <div
                     className="absolute w-full absolute_center  center z-[10] flex-col ">
 
@@ -330,38 +338,38 @@ const FrameA = () => {
                 <div
                     className="clip_container overflow-hidden absolute top-0 left-1/2 translate-x-[-50%] w-full h-full center "
                 >
-                    <div
-                        ref={logoRef2}
-                        className=" absolute absolute_center w-full z-[9]">
 
-                        <div className=" logo_div  center   w-full">
-                            <img className="w-[94.8%]" src="/logos/Logo_Light.svg" alt="" />
-                        </div>
-
-                        <div className=" short_desc w-full px-10 py-2 text-[#fffbf3]  overflow-hidden text-[16px] flex items-center justify-between">
-                            <p>3D ideas, big projects</p>
-                            <h2>Antoine</h2>
-                            <p>Freelance 3D Graphic Designer</p>
-                            <h2 className="text-[12px]">Based in Toulouse, France</h2>
-                        </div>
-                    </div>
                     <img
                         className="object-cover w-full h-full"
                         src="https://images.prismic.io/archi-malin/Z2oIO5bqstJ98zX3_BLEUFINAL.jpg?auto=format%2Ccompress&rect=0%2C269%2C1128%2C731&w=2200&h=1425"
                         alt=""
                     />
                 </div>
-
                 <div
-                    className=" profile_pic absolute bottom-[-100%] absolute_x_center w-[35%]  h-[80vh]">
+                    ref={logoRef2}
+                    className=" absolute absolute_center w-full z-[9]">
+
+                    <div className=" logo_div  center   w-full">
+                        <img className="w-[94.8%]" src="/logos/Logo_Light.svg" alt="" />
+                    </div>
+
+                    <div className=" short_desc w-full px-10 py-2 text-[#fffbf3]  overflow-hidden text-[16px] flex items-center justify-between">
+                        <p>3D ideas, big projects</p>
+                        <h2>Antoine</h2>
+                        <p>Freelance 3D Graphic Designer</p>
+                        <h2 className="text-[12px]">Based in Toulouse, France</h2>
+                    </div>
+                </div>
+                <div
+                    className=" profile_pic absolute z-[8] bottom-[-100%] absolute_x_center w-[35%]  h-[80vh]">
                     <img className='object-cover w-full h-full' src="https://images.prismic.io/archi-malin/Z-5c0ndAxsiBwQ87_FINALPERSSITE.jpg?auto=format,compress&rect=168,0,2223,1440&w=2200&h=1425" alt="" />
                 </div>
 
-                <div className=" slide_box -translate-x-1/2 w-[25vw] p-5 text-[1.2vw] absolute h-[60vh] bg-white bottom-0  left-[125%] text-center center">
+                <div className=" slide_box z-[10] -translate-x-1/2 w-[25vw] p-5 text-[1.2vw] absolute h-[60vh] bg-white bottom-0  left-[125%] text-center center">
                     <p>I’m Piran, a brand strategist, philosopher and someone who’s always been fascinated by how people and patterns connect. I grew up in Mumbai, where life was fast, full, and full of feeling. Later, design gave me structure, and college taught me to breathe between the lines. I’ve worked across industries, but my approach stays the same — slow down, ask better questions, and build something that feels like it belongs. This isn’t just a portfolio. It’s a peek into what shaped the lens I use today. </p>
                 </div>
 
-                <div className=" slide_box_upside  w-[40vw]   absolute text-white   bottom-[-150%]  right-0 ">
+                <div className=" slide_box_upside  w-[40vw] z-[10] absolute text-white   bottom-[-150%]  right-0 ">
                     <h2 className='text-xl mb-6'>What I believe and follow</h2>
                     <h2 className='text-xl'>Brand as a Living System</h2>
                     <p className='text-4xl leading-none mb-10 mix_light'>A brand isn’t just a logo — it’s a living, evolving ecosystem. The strongest ones grow with their audience and stay rooted in purpose.</p>
@@ -371,7 +379,7 @@ const FrameA = () => {
                     <p className='text-4xl leading-none mb-10 mix_light'>Innovation without intention is just noise. I design with awareness — of people, context, and long-term impact</p>
                 </div>
 
-                <div className=" frameB  w-full h-screen bg-[#FFFBF3] absolute top-0 left-[100%]">
+                <div className=" frameB  w-full h-screen z-[12] bg-[#FFFBF3] absolute top-0 left-[100%]">
 
                     <div className=" absolute top-0 left-0 spn_slide w-[75%]">
                         <h2 className='text-black text-[4.5vw] p-4 leading-none'>
@@ -411,7 +419,7 @@ const FrameA = () => {
                     </div>
 
                 </div>
-                <div className="frame_slider absolute top-[100%]  left-0 w-full  bg-[#FFFBF3] z-[10]">
+                <div className="frame_slider absolute top-[100%]  left-0 w-full  bg-[#FFFBF3] z-[14]">
 
                     <div className="w-full h-[30vh] text-black center flex-col text-center">
                         <p className='text-6xl uppercase'>Projects</p>
