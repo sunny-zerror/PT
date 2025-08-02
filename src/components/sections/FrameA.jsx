@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { RiCloseLine } from '@remixicon/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +10,80 @@ const FrameA = () => {
     const logoRef = useRef(null);
     const logoRef2 = useRef(null);
     const clipRef = useRef(null);
+    const vectorRef1 = useRef(null)
+    const vectorRef2 = useRef(null)
+    const vectorRef3 = useRef(null)
+
+    const openVector1 = () => {
+        gsap.to(vectorRef1.current, {
+            width: "100%",
+            height: "100vh",
+            clipPath: "shape(nonzero from 69.48% 0%, curve to 70.98% 0% with 70.26% 0% / 70.8% 0%, curve to 71.88% 0% with 71.34% 0% / 71.7% 0%, line to 100% 0%, line to 100% 49.48%, curve to 100% 49.83% with 100% 49.77% / 100% 49.3%, curve to 100% 50.06% with 100% 49.94% / 100% 49.92%, curve to 100% 50.35% with 100% 50.19% / 100% 50.23%, curve to 100% 50.58% with 100% 50.9% / 100% 50.23%, curve to 100% 51.1% with 100% 51.98% / 100% 49.59%, curve to 100% 51.74% with 100% 52.15% / 100% 49.48%, curve to 100% 100% with 100% 56.16% / 99.88% 91.86%, curve to 38.19% 100% with 94.61% 100% / 41.96% 100%, curve to 32.89% 100% with 35.13% 100% / 34.32% 99.96%, curve to 32.08% 100% with 32.71% 100% / 32.32% 100%, curve to 31.03% 100% with 31.81% 100% / 31.36% 100%, curve to 25.43% 100% with 30.73% 100% / 25.7% 100%, curve to 0% 100% with 25.16% 100% / 0.27% 100%, line to 0% 51.28%, curve to 0% 51.05% with -0% 51.22% / 0% 51.16%, curve to 0% 50.23% with 0% 50.99% / 0% 50.72%, curve to 0% 49.42% with 0% 49.81% / 0% 49.65%, line to 0% 48.02%, curve to 0% 43.84% with 0% 46.63% / 0% 45.87%, curve to 0% 0% with 0% 41.28% / 0% 3.43%, curve to 16.54% 0% with 9.79% -0% / 13.93% 0%, curve to 67.84% 0% with 31.99% 0% / 67.57% 0%, curve to 68.2% 0% with 67.93% 0% / 68.02% 0%, curve to 68.65% 0% with 68.29% -0% / 68.43% 0%, curve to 69.48% 0% with 68.91% 0% / 69.17% 0%, close)",
+            duration: 1,
+            left: 0,
+            zIndex: 1000,
+            backgroundColor: "red",
+        })
+    }
+    const openVector2 = () => {
+        gsap.to(vectorRef2.current, {
+            width: "100%",
+            height: "100vh",
+            clipPath: "shape(nonzero from 69.48% 0%, curve to 70.98% 0% with 70.26% 0% / 70.8% 0%, curve to 71.88% 0% with 71.34% 0% / 71.7% 0%, line to 100% 0%, line to 100% 49.48%, curve to 100% 49.83% with 100% 49.77% / 100% 49.3%, curve to 100% 50.06% with 100% 49.94% / 100% 49.92%, curve to 100% 50.35% with 100% 50.19% / 100% 50.23%, curve to 100% 50.58% with 100% 50.9% / 100% 50.23%, curve to 100% 51.1% with 100% 51.98% / 100% 49.59%, curve to 100% 51.74% with 100% 52.15% / 100% 49.48%, curve to 100% 100% with 100% 56.16% / 99.88% 91.86%, curve to 38.19% 100% with 94.61% 100% / 41.96% 100%, curve to 32.89% 100% with 35.13% 100% / 34.32% 99.96%, curve to 32.08% 100% with 32.71% 100% / 32.32% 100%, curve to 31.03% 100% with 31.81% 100% / 31.36% 100%, curve to 25.43% 100% with 30.73% 100% / 25.7% 100%, curve to 0% 100% with 25.16% 100% / 0.27% 100%, line to 0% 51.28%, curve to 0% 51.05% with -0% 51.22% / 0% 51.16%, curve to 0% 50.23% with 0% 50.99% / 0% 50.72%, curve to 0% 49.42% with 0% 49.81% / 0% 49.65%, line to 0% 48.02%, curve to 0% 43.84% with 0% 46.63% / 0% 45.87%, curve to 0% 0% with 0% 41.28% / 0% 3.43%, curve to 16.54% 0% with 9.79% -0% / 13.93% 0%, curve to 67.84% 0% with 31.99% 0% / 67.57% 0%, curve to 68.2% 0% with 67.93% 0% / 68.02% 0%, curve to 68.65% 0% with 68.29% -0% / 68.43% 0%, curve to 69.48% 0% with 68.91% 0% / 69.17% 0%, close)",
+            duration: 1,
+            left: 0,
+            zIndex: 1000,
+            backgroundColor: "red",
+        })
+    }
+    const openVector3 = () => {
+        gsap.to(vectorRef3.current, {
+            width: "100%",
+            height: "100vh",
+            clipPath: "shape(nonzero from 69.48% 0%, curve to 70.98% 0% with 70.26% 0% / 70.8% 0%, curve to 71.88% 0% with 71.34% 0% / 71.7% 0%, line to 100% 0%, line to 100% 49.48%, curve to 100% 49.83% with 100% 49.77% / 100% 49.3%, curve to 100% 50.06% with 100% 49.94% / 100% 49.92%, curve to 100% 50.35% with 100% 50.19% / 100% 50.23%, curve to 100% 50.58% with 100% 50.9% / 100% 50.23%, curve to 100% 51.1% with 100% 51.98% / 100% 49.59%, curve to 100% 51.74% with 100% 52.15% / 100% 49.48%, curve to 100% 100% with 100% 56.16% / 99.88% 91.86%, curve to 38.19% 100% with 94.61% 100% / 41.96% 100%, curve to 32.89% 100% with 35.13% 100% / 34.32% 99.96%, curve to 32.08% 100% with 32.71% 100% / 32.32% 100%, curve to 31.03% 100% with 31.81% 100% / 31.36% 100%, curve to 25.43% 100% with 30.73% 100% / 25.7% 100%, curve to 0% 100% with 25.16% 100% / 0.27% 100%, line to 0% 51.28%, curve to 0% 51.05% with -0% 51.22% / 0% 51.16%, curve to 0% 50.23% with 0% 50.99% / 0% 50.72%, curve to 0% 49.42% with 0% 49.81% / 0% 49.65%, line to 0% 48.02%, curve to 0% 43.84% with 0% 46.63% / 0% 45.87%, curve to 0% 0% with 0% 41.28% / 0% 3.43%, curve to 16.54% 0% with 9.79% -0% / 13.93% 0%, curve to 67.84% 0% with 31.99% 0% / 67.57% 0%, curve to 68.2% 0% with 67.93% 0% / 68.02% 0%, curve to 68.65% 0% with 68.29% -0% / 68.43% 0%, curve to 69.48% 0% with 68.91% 0% / 69.17% 0%, close)",
+            duration: 1,
+            left: 0,
+            zIndex: 1000,
+            backgroundColor: "red",
+        })
+    }
+
+    const closeVector1 = (event) => {
+        event.stopPropagation();
+        gsap.to(vectorRef1.current, {
+            width: "50vh",
+            height: "80vh",
+            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)",
+            duration: 1,
+            left: "15%",
+            zIndex: 10,
+            
+        })
+    }
+    const closeVector2 = (event) => {
+        event.stopPropagation();
+        gsap.to(vectorRef2.current, {
+            width: "50vh",
+            height: "80vh",
+            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)",
+            duration: 1,
+            left: "40%",
+            zIndex: 10,
+            
+        })
+    }
+    const closeVector3 = (event) => {
+        event.stopPropagation();
+        gsap.to(vectorRef3.current, {
+            width: "50vh",
+            height: "80vh",
+            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)",
+            duration: 1,
+            left: "65%",
+            zIndex: 10,
+            
+        })
+    }
 
     useEffect(() => {
 
@@ -75,6 +150,8 @@ const FrameA = () => {
             ease: "expo.inOut",
             delay: 5.5
         })
+
+        ////////////////////////////////////
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: main_Ref.current,
@@ -93,12 +170,14 @@ const FrameA = () => {
 
         tl.to([logoRef.current, logoRef2.current], {
             top: "20%",
-            ease: "ease.out"
+            ease: "ease.out",
+            duration: 1,
         }, "pin");
 
         tl.to(clipRef.current, {
             clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
-            ease: "ease.out"
+            ease: "ease.out",
+            duration: 1,
         }, "pin");
 
         tl.to(".profile_pic", {
@@ -260,6 +339,22 @@ const FrameA = () => {
             duration: 1,
             delay: 1
         }, "pin8")
+        tl.to(".cont", {
+            width: "80vh",
+            height: "80vh",
+            duration: 2,
+        }, "pin9")
+
+        tl.to(".cont", {
+            opacity: 0,
+            duration: 1,
+        }, "pin10")
+        tl.to(".last_vec", {
+            opacity: 1,
+            pointerEvents: "auto",
+            duration: 1,
+        }, "pin10")
+
 
 
 
@@ -441,7 +536,7 @@ const FrameA = () => {
                             style={{
                                 height: "500vh",
                                 width: "500vh",
-                                clipPath: "shape(nonzero from 76.21% 86.09%, line to 63.38% 90.25%, curve to 55.46% 91.69% with 61.69% 90.25% / 55.46% 90.25%, curve to 50.33% 98.64% with 55.46% 96.93% / 50.35% 93.41%, curve to 49.71% 100% with 50.33% 99.16% / 50.59% 99.95%, curve to 48.85% 98.73% with 48.88% 100.04% / 48.93% 99.25%, curve to 39.08% 86.89% with 48.05% 93.75% / 41.48% 91.45%, curve to 27.13% 81.58% with 37.13% 83.16% / 30.14% 84.73%, curve to 21.78% 63.3% with 23.02% 77.25% / 27.36% 66.11%, curve to 1.19% 57.08% with 15.35% 60.09% / 8.47% 58.09%, curve to 0% 56.43% with 0.68% 57.01% / -0.05% 57.1%, curve to 1.3% 55.9% with 0.06% 55.79% / 0.78% 55.9%, curve to 23.74% 55.21% with 11.92% 55.89% / 13.11% 55.2%, curve to 24.74% 54.66% with 24.63% 55.21% / 23.85% 54.66%, curve to 15.78% 49.96% with 24.98% 54.66% / 15.68% 50.23%, curve to 25.81% 50.76% with 15.85% 49.76% / 25.95% 50.91%, curve to 21.89% 44.68% with 21.8% 46.47% / 27.33% 47.46%, curve to 6.98% 39.44% with 17.24% 42.3% / 12.21% 40.54%, curve to 1.02% 38.43% with 5.02% 39% / 3.03% 38.67%, curve to 0.09% 37.8% with 0.57% 38.38% / 0.09% 38.32%, curve to 1.07% 37.27% with 0.09% 37.22% / 0.62% 37.29%, curve to 2.02% 37.27% with 1.38% 37.26% / 1.7% 37.27%, line to 23.74% 35.44%, curve to 21.89% 34.03% with 24.03% 35.44% / 21.61% 34.04%, curve to 24.26% 34.03% with 22.13% 34.02% / 24.14% 34.29%, curve to 23.55% 32.08% with 24.38% 33.78% / 23.7% 32.24%, curve to 25.02% 28.22% with 21.77% 30.25% / 27.08% 29.82%, curve to 18.35% 24.36% with 21.37% 25.43% / 22.71% 26.21%, curve to 1.28% 19.8% with 12.94% 22.06% / 7.27% 20.48%, curve to 0.82% 19.72% with 1.12% 19.79% / 0.97% 19.76%, curve to 0.09% 19.08% with 0.44% 19.63% / 0.06% 19.51%, curve to 0.9% 18.52% with 0.12% 18.65% / 0.5% 18.55%, curve to 1.94% 18.5% with 1.25% 18.5% / 1.59% 18.5%, line to 32.67% 11.31%, curve to 45.26% 11.31% with 34.3% 11.31% / 45.26% 12.73%, line to 49.03% 2.05%, curve to 49.03% 1.3% with 49.03% 1.8% / 49.01% 1.55%, curve to 49.63% 0% with 49.08% 0.81% / 48.81% 0.06%, curve to 50.37% 1.19% with 50.51% -0.06% / 50.26% 0.71%, curve to 51.92% 7.44% with 50.84% 3.29% / 51.25% 5.38%, curve to 61.67% 17.09% with 53.27% 11.63% / 59.18% 13.32%, curve to 72.83% 21.25% with 63.5% 19.85% / 70.39% 18.88%, curve to 81.07% 29.92% with 76.68% 24.99% / 76.07% 27.4%, curve to 92.17% 41.81% with 85.71% 32.25% / 86.98% 40.69%, curve to 98.4% 42.89% with 94.24% 42.25% / 96.32% 42.56%, curve to 99.27% 43.47% with 98.81% 42.96% / 99.29% 42.98%, curve to 98.32% 44.07% with 99.27% 44% / 98.77% 44.04%, curve to 97.37% 44.08% with 98.01% 44.09% / 97.69% 44.08%, line to 87.21% 46.1%, curve to 90.27% 48.09% with 86.92% 46.1% / 90.56% 48.09%, curve to 90.07% 50.4% with 90.06% 48.1% / 90.19% 50.18%, curve to 89.16% 54.95% with 89.96% 50.62% / 89.03% 54.81%, curve to 85.65% 56.11% with 91.05% 57% / 83.35% 54.41%, curve to 84.83% 58.44% with 90.25% 59.51% / 79.24% 56.5%, curve to 98.09% 61.51% with 89.09% 59.93% / 93.55% 60.96%, line to 98.37% 61.54%, curve to 99.26% 62.2% with 98.82% 61.6% / 99.32% 61.67%, curve to 98.24% 62.71% with 99.2% 62.74% / 98.67% 62.69%, curve to 97.29% 62.71% with 97.92% 62.72% / 97.6% 62.71%, curve to 96.75% 69.18% with 86.25% 62.71% / 107.79% 69.18%, curve to 90.87% 69.62% with 96.31% 69.18% / 91.08% 69.16%, curve to 85.65% 72.62% with 90.69% 70% / 108.67% 81.17%, curve to 83.7% 74.96% with 88.52% 75.58% / 80.08% 72.73%, curve to 84.63% 77.08% with 87.23% 77.12% / 80.65% 75.66%, curve to 96.75% 80.08% with 88.55% 78.49% / 92.63% 79.32%, curve to 98.62% 80.31% with 97.36% 80.19% / 98% 80.22%, curve to 99.25% 80.9% with 98.99% 80.36% / 99.31% 80.51%, curve to 98.52% 81.45% with 99.2% 81.26% / 98.9% 81.42%, curve to 97.48% 81.48% with 98.18% 81.48% / 97.83% 81.49%, line to 76.21% 86.09%, close)"
+                                clipPath: "shape(nonzero from 100% 100%, line to 66.33% 100%, curve to 58.13% 100% with 64.62% 100% / 59.89% 100%, curve to 53.48% 100% with 55.65% 100% / 56.67% 100%, curve to 50.26% 100% with 52.38% 100% / 51.18% 100%, curve to 45.76% 100% with 49.4% 100% / 46.31% 100%, curve to 30.63% 100% with 41.76% 100% / 30.63% 100%, curve to 0% 100% with 29.17% 100% / 2.64% 100%, curve to 0% 66.42% with 0% 97.9% / 0% 71.11%, curve to 0% 56.98% with 0% 62.34% / 0% 62.05%, curve to 0% 54.51% with 0% 56.38% / 0% 55.15%, curve to 0% 53.75% with 0% 53.9% / 0% 54.17%, curve to 0% 51.45% with 0% 51.27% / 0% 52.34%, curve to 0% 48.24% with 0% 50.85% / 0% 48.93%, curve to 0% 46.05% with 0% 48.04% / 0% 46.32%, curve to 0% 44.33% with 0% 45.85% / 0% 44.51%, curve to 0% 41.25% with 0% 43.19% / 0% 42.79%, curve to 0% 38.51% with 0% 40.58% / 0% 39.2%, curve to 0% 37.55% with 0% 38.11% / 0% 37.82%, curve to 0% 36.36% with 0% 37.37% / -0% 36.85%, curve to 0% 35.81% with 0% 36.28% / 0% 35.97%, curve to 0% 35.74% with 0% 35.79% / 0% 35.77%, line to 0% 30.77%, curve to 0% 29.96% with 0% 30.64% / 0% 30.14%, curve to 0% 29.16% with 0% 29.88% / 0% 29.45%, curve to 0% 27.47% with 0% 28.92% / 0% 27.67%, curve to 0% 25.21% with 0% 26.62% / 0% 26.48%, curve to 0% 22.49% with 0% 24.36% / 0% 23.96%, curve to 0% 19.88% with 0% 21.33% / 0% 20.71%, curve to 0% 19.7% with -0% 19.83% / 0% 19.79%, curve to 0% 19.12% with 0% 19.54% / 0% 19.52%, curve to 0% 18.59% with 0% 18.72% / 0% 18.79%, curve to 0% 17.83% with 0% 18.52% / 0% 18.07%, line to 0% 0%, curve to 25.17% 0% with 1.67% 0% / 22.71% 0%, line to 48.98% 0%, curve to 49.79% 0% with 49.08% 0% / 49.55% 0%, curve to 51.12% 0% with 50.03% 0% / 50.59% 0%, curve to 51.86% 0% with 52.02% 0% / 51.54% -0%, curve to 55.18% 0% with 53.19% 0% / 54.11% 0%, curve to 68.34% 0% with 59.26% 0% / 64.41% 0%, curve to 100% 0% with 72.76% 0% / 96.81% 0%, curve to 100% 29.96% with 100% 4.11% / 100% 25.21%, curve to 100% 39.51% with 100% 32.69% / 100% 37.15%, curve to 100% 41.63% with 100% 40.52% / 100% 40.92%, curve to 100% 42.24% with 100% 41.79% / 100% 41.88%, curve to 100% 43.04% with 100% 42.73% / 100% 42.82%, curve to 100% 44.07% with 100% 43.35% / 100% 43.89%, line to 100% 47.79%, curve to 100% 49.06% with 100% 47.93% / 100% 48.95%, curve to 100% 50.69% with 100% 49.14% / 100% 50.49%, curve to 100% 51.56% with 100% 50.91% / 100% 51.41%, curve to 100% 53.82% with 100% 52.45% / 100% 52.59%, curve to 100% 56.43% with 100% 54.93% / 100% 55.04%, curve to 100% 59.01% with 100% 57.27% / 100% 58.39%, line to 100% 59.26%, curve to 100% 59.97% with 100% 59.39% / 100% 59.46%, curve to 100% 60.75% with 100% 60.49% / 100% 60.67%, curve to 100% 61% with 100% 60.87% / 100% 60.96%, curve to 100% 66.47% with 100% 61.42% / 100% 65.04%, curve to 100% 68.32% with 100% 66.67% / 100% 67.87%, curve to 100% 69.57% with 100% 68.7% / 100% 69.28%, curve to 100% 73.25% with 100% 71.33% / 100% 71.89%, curve to 100% 75.01% with 100% 74.23% / 100% 74.45%, curve to 100% 76.53% with 100% 75.75% / 100% 76.08%, curve to 100% 77.22% with 100% 76.77% / 100% 77%, curve to 100% 77.69% with 100% 77.33% / 100% 77.31%, curve to 100% 78.36% with 100% 78.02% / 100% 78.22%, curve to 100% 79.27% with 100% 78.58% / 100% 79.14%, line to 100% 100%, close)"
                             }}
                             className="cont center rotate-90 origin-center ">
                             <div className=" cont_child w-[100vw] h-screen shrink-0 -rotate-90 grid grid-cols-4 gap-5 px-5 overflow-hidden">
@@ -548,6 +643,40 @@ const FrameA = () => {
                         </div>
                     </div>
                 </div>
+                <div className=" last_vec opacity-0 z-[20] pointer-events-none flex absolute items-center w-full justify-center h-screen">
+                    <div
+                        ref={vectorRef1}
+                        onClick={openVector1}
+                        style={{
+                            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
+                        }}
+                        className=" absolute left-[15%]   w-[50vh]  h-[80vh] overflow-hidden bg-blue-400 ">
+                        <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1753808645481-070fba323120?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                        <RiCloseLine onClick={closeVector1}  className='absolute top-5 right-5 cursor-pointer text-white'  size={34}/>
+                    </div>
+                    <div
+                        ref={vectorRef2}
+                        onClick={openVector2}
+                        style={{
+                            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
+                        }}
+                        className=" absolute left-[40%]   w-[50vh]  h-[80vh] overflow-hidden bg-blue-400 ">
+                        <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1753724933350-c2e0e2990445?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                        <RiCloseLine onClick={closeVector2}  className='absolute top-5 right-5 cursor-pointer text-white'  size={34}/>
+
+                    </div>
+                    <div
+                        ref={vectorRef3}
+                        onClick={openVector3}
+                        style={{
+                            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
+                        }}
+                        className=" absolute left-[65%]   w-[50vh]  h-[80vh] overflow-hidden bg-blue-400 ">
+                        <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1751768853626-3737132f25f7?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                        <RiCloseLine onClick={closeVector3}  className='absolute top-5 right-5 cursor-pointer text-white'  size={34}/>
+
+                    </div>
+                </div>
             </div>
             <div className="w-full h-[20vh] p-10  flex items-center justify-between">
                 <div className="w-[30%] h-full">
@@ -562,14 +691,14 @@ const FrameA = () => {
                 </div>
                 <div className="w-[30%] flex items-center gap-10 justify-center h-full">
                     <p>Copyright © 2025 . All rights reserved.</p>
-                    <div className="center group">
+                    <div className="center group cursor-pointer">
                         <img className='absolute group-hover:-rotate-45 z-[9] transition-all duration-300' src="/logos/arrow-right.svg" alt="" />
                         <img className='rotate' src="/logos/contact_rotate.svg" alt="" />
                     </div>
                 </div>
             </div>
-                </div>
-    );  
-};  
+        </div>
+    );
+};
 
 export default FrameA;
