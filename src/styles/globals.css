@@ -53,6 +53,9 @@ h2 {
   cursor: default;
   font-family: vvds-fifties-exp-reg;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 .scrollbar_hide::-webkit-scrollbar {
   display: none;
 }

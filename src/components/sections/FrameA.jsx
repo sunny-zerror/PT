@@ -3,87 +3,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { RiCloseLine } from '@remixicon/react';
 import { CustomEase } from 'gsap/dist/CustomEase';
-gsap.registerPlugin(ScrollTrigger, CustomEase);
+import MotionPathPlugin from 'gsap/dist/MotionPathPlugin';
+gsap.registerPlugin(ScrollTrigger, CustomEase, MotionPathPlugin);
 
 const FrameA = () => {
     const main_Ref = useRef(null);
     const logoRef = useRef(null);
     const logoRef2 = useRef(null);
     const clipRef = useRef(null);
-    const vectorRef1 = useRef(null)
-    const vectorRef2 = useRef(null)
-    const vectorRef3 = useRef(null)
-
-    const openVector1 = () => {
-        gsap.to(vectorRef1.current, {
-            width: "100%",
-            height: "100vh",
-            clipPath: "shape(nonzero from 69.48% 0%, curve to 70.98% 0% with 70.26% 0% / 70.8% 0%, curve to 71.88% 0% with 71.34% 0% / 71.7% 0%, line to 100% 0%, line to 100% 49.48%, curve to 100% 49.83% with 100% 49.77% / 100% 49.3%, curve to 100% 50.06% with 100% 49.94% / 100% 49.92%, curve to 100% 50.35% with 100% 50.19% / 100% 50.23%, curve to 100% 50.58% with 100% 50.9% / 100% 50.23%, curve to 100% 51.1% with 100% 51.98% / 100% 49.59%, curve to 100% 51.74% with 100% 52.15% / 100% 49.48%, curve to 100% 100% with 100% 56.16% / 99.88% 91.86%, curve to 38.19% 100% with 94.61% 100% / 41.96% 100%, curve to 32.89% 100% with 35.13% 100% / 34.32% 99.96%, curve to 32.08% 100% with 32.71% 100% / 32.32% 100%, curve to 31.03% 100% with 31.81% 100% / 31.36% 100%, curve to 25.43% 100% with 30.73% 100% / 25.7% 100%, curve to 0% 100% with 25.16% 100% / 0.27% 100%, line to 0% 51.28%, curve to 0% 51.05% with -0% 51.22% / 0% 51.16%, curve to 0% 50.23% with 0% 50.99% / 0% 50.72%, curve to 0% 49.42% with 0% 49.81% / 0% 49.65%, line to 0% 48.02%, curve to 0% 43.84% with 0% 46.63% / 0% 45.87%, curve to 0% 0% with 0% 41.28% / 0% 3.43%, curve to 16.54% 0% with 9.79% -0% / 13.93% 0%, curve to 67.84% 0% with 31.99% 0% / 67.57% 0%, curve to 68.2% 0% with 67.93% 0% / 68.02% 0%, curve to 68.65% 0% with 68.29% -0% / 68.43% 0%, curve to 69.48% 0% with 68.91% 0% / 69.17% 0%, close)",
-            duration: 1,
-            left: 0,
-            zIndex: 1000,
-            backgroundColor: "red",
-        })
-    }
-    const openVector2 = () => {
-        gsap.to(vectorRef2.current, {
-            width: "100%",
-            height: "100vh",
-            clipPath: "shape(nonzero from 69.48% 0%, curve to 70.98% 0% with 70.26% 0% / 70.8% 0%, curve to 71.88% 0% with 71.34% 0% / 71.7% 0%, line to 100% 0%, line to 100% 49.48%, curve to 100% 49.83% with 100% 49.77% / 100% 49.3%, curve to 100% 50.06% with 100% 49.94% / 100% 49.92%, curve to 100% 50.35% with 100% 50.19% / 100% 50.23%, curve to 100% 50.58% with 100% 50.9% / 100% 50.23%, curve to 100% 51.1% with 100% 51.98% / 100% 49.59%, curve to 100% 51.74% with 100% 52.15% / 100% 49.48%, curve to 100% 100% with 100% 56.16% / 99.88% 91.86%, curve to 38.19% 100% with 94.61% 100% / 41.96% 100%, curve to 32.89% 100% with 35.13% 100% / 34.32% 99.96%, curve to 32.08% 100% with 32.71% 100% / 32.32% 100%, curve to 31.03% 100% with 31.81% 100% / 31.36% 100%, curve to 25.43% 100% with 30.73% 100% / 25.7% 100%, curve to 0% 100% with 25.16% 100% / 0.27% 100%, line to 0% 51.28%, curve to 0% 51.05% with -0% 51.22% / 0% 51.16%, curve to 0% 50.23% with 0% 50.99% / 0% 50.72%, curve to 0% 49.42% with 0% 49.81% / 0% 49.65%, line to 0% 48.02%, curve to 0% 43.84% with 0% 46.63% / 0% 45.87%, curve to 0% 0% with 0% 41.28% / 0% 3.43%, curve to 16.54% 0% with 9.79% -0% / 13.93% 0%, curve to 67.84% 0% with 31.99% 0% / 67.57% 0%, curve to 68.2% 0% with 67.93% 0% / 68.02% 0%, curve to 68.65% 0% with 68.29% -0% / 68.43% 0%, curve to 69.48% 0% with 68.91% 0% / 69.17% 0%, close)",
-            duration: 1,
-            left: 0,
-            zIndex: 1000,
-            backgroundColor: "red",
-        })
-    }
-    const openVector3 = () => {
-        gsap.to(vectorRef3.current, {
-            width: "100%",
-            height: "100vh",
-            clipPath: "shape(nonzero from 69.48% 0%, curve to 70.98% 0% with 70.26% 0% / 70.8% 0%, curve to 71.88% 0% with 71.34% 0% / 71.7% 0%, line to 100% 0%, line to 100% 49.48%, curve to 100% 49.83% with 100% 49.77% / 100% 49.3%, curve to 100% 50.06% with 100% 49.94% / 100% 49.92%, curve to 100% 50.35% with 100% 50.19% / 100% 50.23%, curve to 100% 50.58% with 100% 50.9% / 100% 50.23%, curve to 100% 51.1% with 100% 51.98% / 100% 49.59%, curve to 100% 51.74% with 100% 52.15% / 100% 49.48%, curve to 100% 100% with 100% 56.16% / 99.88% 91.86%, curve to 38.19% 100% with 94.61% 100% / 41.96% 100%, curve to 32.89% 100% with 35.13% 100% / 34.32% 99.96%, curve to 32.08% 100% with 32.71% 100% / 32.32% 100%, curve to 31.03% 100% with 31.81% 100% / 31.36% 100%, curve to 25.43% 100% with 30.73% 100% / 25.7% 100%, curve to 0% 100% with 25.16% 100% / 0.27% 100%, line to 0% 51.28%, curve to 0% 51.05% with -0% 51.22% / 0% 51.16%, curve to 0% 50.23% with 0% 50.99% / 0% 50.72%, curve to 0% 49.42% with 0% 49.81% / 0% 49.65%, line to 0% 48.02%, curve to 0% 43.84% with 0% 46.63% / 0% 45.87%, curve to 0% 0% with 0% 41.28% / 0% 3.43%, curve to 16.54% 0% with 9.79% -0% / 13.93% 0%, curve to 67.84% 0% with 31.99% 0% / 67.57% 0%, curve to 68.2% 0% with 67.93% 0% / 68.02% 0%, curve to 68.65% 0% with 68.29% -0% / 68.43% 0%, curve to 69.48% 0% with 68.91% 0% / 69.17% 0%, close)",
-            duration: 1,
-            left: 0,
-            zIndex: 1000,
-            backgroundColor: "red",
-        })
-    }
-
-    const closeVector1 = (event) => {
-        event.stopPropagation();
-        gsap.to(vectorRef1.current, {
-            width: "22vw",
-            height: "80vh",
-            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)",
-            duration: 1,
-            left: "15%",
-            zIndex: 10,
-
-        })
-    }
-    const closeVector2 = (event) => {
-        event.stopPropagation();
-        gsap.to(vectorRef2.current, {
-            width: "22vw",
-            height: "80vh",
-            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)",
-            duration: 1,
-            left: "40%",
-            zIndex: 10,
-
-        })
-    }
-    const closeVector3 = (event) => {
-        event.stopPropagation();
-        gsap.to(vectorRef3.current, {
-            width: "22vw",
-            height: "80vh",
-            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)",
-            duration: 1,
-            left: "65%",
-            zIndex: 10,
-
-        })
-    }
 
     useEffect(() => {
         gsap.set(".logo_div", {
@@ -174,6 +101,11 @@ const FrameA = () => {
 
             });
 
+            gsap.set(".logo_image", {
+                opacity: 0,
+                y: 100
+            })
+
 
             tl.to([logoRef.current, logoRef2.current], {
                 top: 20,
@@ -211,12 +143,16 @@ const FrameA = () => {
                 duration: 1.5,
             }, "pin2");
 
-            tl.to([logoRef.current, logoRef2.current], {
+            tl.to([logoRef.current, logoRef2.current, ".log_par"], {
                 top: "-65vh",
                 duration: 1.5,
             }, "pin2");
 
-
+            tl.to(".logo_image", {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+            }, "pin3");
 
             tl.to(".slide_box", {
                 left: "-13%",
@@ -240,7 +176,7 @@ const FrameA = () => {
             tl.fromTo(".spn_slide", {
                 top: "35%",
             }, {
-                top: "-150%",
+                top: "-65vw",
                 duration: 1.8,
             }, "pin5");
 
@@ -307,12 +243,33 @@ const FrameA = () => {
                 delay: .867,
             }, "pin5.5");
 
+            const path = [
+                { x: 700, y: 20 },
+                { x: 0, y: 0 },
+            ];
             tl.to(".move_proj", {
-                transform: "translate(0 , 0)",
+                motionPath: {
+                    path: path,
+                    align: false,
+                    autoRotate: false,
+                },
                 width: "100%",
-                height: "60vh",
                 duration: 2,
+            }, "pin6")
 
+            tl.to(".move_proj_inner", {
+                height: "25vw",
+                duration: 2,
+            }, "pin6");
+
+            tl.to(".spn_img_slider", {
+                top: "-90vw",
+                duration: 3,
+            }, "pin6");
+
+            tl.to(".frameB", {
+                filter: "brightness(.3)",
+                duration: 2,
             }, "pin6")
 
             tl.to(".frame_slider", {
@@ -321,7 +278,7 @@ const FrameA = () => {
             }, "pin6")
 
             tl.to(".frame_slide_1", {
-                transform: "translateY(-100vh)",
+                transform: "translateY(-90vh)",
                 duration: 4,
                 onComplete: () => {
                     gsap.set(".cont", {
@@ -343,7 +300,7 @@ const FrameA = () => {
                 }
             }, "pin7")
             tl.to(".frame_slide_2", {
-                transform: "translateY(-22vw)",
+                transform: "translateY(-60vw)",
                 duration: 4
             }, "pin7")
             tl.to(".frame_slide_3", {
@@ -351,7 +308,7 @@ const FrameA = () => {
                 duration: 4
             }, "pin7")
             tl.to(".frame_slide_4", {
-                transform: "translateY(-80vh)",
+                transform: "translateY(-90vh)",
                 duration: 4
             }, "pin7")
 
@@ -418,6 +375,11 @@ const FrameA = () => {
 
     return (
         <div>
+            <div className="logo_paren fixed block  w-56 z-[999] p-5">
+                <div className="logo block overflow-hidden">
+                    <img className=' logo_image opacity-0 ' src="/logos/Logo_Dark.svg" alt="" />
+                </div>
+            </div>
             <div ref={main_Ref} className="h-screen w-full relative">
                 <div
                     ref={clipRef}
@@ -433,11 +395,11 @@ const FrameA = () => {
                             <img className="w-[94.8%]" src="/logos/Logo_Dark.svg" alt="" />
                         </div>
 
-                        <div className=" short_desc w-full px-10 py-2  overflow-hidden text-[16px] flex items-center justify-between">
+                        <div className=" short_desc w-full px-10 py-4  overflow-hidden text-[16px] flex items-center justify-between">
                             <p>3D ideas, big projects</p>
-                            <h2>Antoine</h2>
+                            <h2>Creative Director</h2>
                             <p>Freelance 3D Graphic Designer</p>
-                            <h2 className="vvds_light">Based in Toulouse, France</h2>
+                            <h2 className="vvds_light">Mumbai, India.</h2>
                         </div>
                     </div>
                 </div>
@@ -476,21 +438,20 @@ const FrameA = () => {
                     />
                 </div>
 
-                <div className=" absolute w-full h-[65vh] ">
+                <div className="log_par absolute w-full h-[65vh] ">
                     <div
                         ref={logoRef2}
                         className=" absolute bottom-0 w-full z-[9]">
                         <div className=" logo_div  center   w-full">
                             <img className="w-[94.8%]" src="/logos/Logo_Light.svg" alt="" />
                         </div>
-                        <div className=" short_desc w-full px-10 py-2 text-[#fffbf3]  overflow-hidden text-[16px] flex items-center justify-between">
+                        <div className=" short_desc w-full px-10 py-4 text-[#fffbf3]  overflow-hidden text-[16px] flex items-center justify-between">
                             <p>3D ideas, big projects</p>
-                            <h2>Antoine</h2>
+                            <h2>Creative Director</h2>
                             <p>Freelance 3D Graphic Designer</p>
-                            <h2 className='vvds_light' >Based in Toulouse, France</h2>
+                            <h2 className='vvds_light' >Mumbai, India.</h2>
                         </div>
                     </div>
-
                 </div>
                 <div
                     className=" profile_pic absolute z-[8] bottom-[-100%] absolute_x_center w-[35%]  h-[80vh]">
@@ -515,7 +476,7 @@ const FrameA = () => {
                     <p className='text-4xl leading-none mb-10 mix_light'>Innovation without intention is just noise. I design with awareness — of people, context, and long-term impact</p>
                 </div>
 
-                <div className=" frameB  w-full h-screen z-[12] bg-[#FFFBF3] absolute top-0 left-[100%]">
+                <div className=" frameB brightness-100   w-full h-screen z-[12] bg-[#FFFBF3] absolute top-0 left-[100%]">
 
                     <div className=" absolute top-0 left-0 spn_slide w-[75%]">
                         <h2 className='text-black text-[4.5vw] p-4 leading-none'>
@@ -564,10 +525,11 @@ const FrameA = () => {
 
                 </div>
                 <div className="frame_slider absolute top-[100%]  left-0 w-full   z-[14]">
-                    <div className="w-full h-[80vh] bg-transparent"></div>
-                    <div className="w-full h-[29vh] text-black bg-[#FFFBF3] center flex-col text-center">
-                        <h2 className='capitalize text-5xl  mt-2 '>Outdoor Indoor Gear</h2>
-                        <h2 className=' text-xl  leading-none uppercase'>Outdoor gear for the mountains and the office.</h2>
+                    <div className="w-full h-[70vh] bg-transparent"></div>
+                    <div className="w-full h-[40vh] center flex-col gap-5 text-black bg-[#FFFBF3]">
+                        <h2 className='uppercase  text-xl vvds_light'>Projects</h2>
+                        <h2 className='capitalize text-6xl vvds_light'>Outdoor Indoor Gear</h2>
+                        <h2 className='capitalize  opacity-70 '>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
                     </div>
                     <div className='center w-full   h-screen'>
                         <div
@@ -581,8 +543,8 @@ const FrameA = () => {
                                 <div className=" frame_slide_1  w-full h-screen space-y-10 bg-[#FFFBF3]">
 
 
-                                    <div className="move_proj  z-[999] translate-x-[76.5vw] bg-[#fffbf3] translate-y-[-100vh]  w-[87%] ">
-                                        <div className="h-[22vw] w-full">
+                                    <div className="move_proj  z-[999] translate-x-[76.6vw] bg-[#fffbf3] translate-y-[-100vh]  w-[88%] ">
+                                        <div className=" move_proj_inner  aspect-square h-[22vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/t-shirt.jpg" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>MothTech T-Shirt</h2>
@@ -591,96 +553,95 @@ const FrameA = () => {
 
 
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/8.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Gel Quantum 360 VIII</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Asics x Lack of Guidance</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Pas Normal Studios</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>PNS x Salomon Daypack</h2>
                                     </div>
                                 </div>
-                                <div className=" frame_slide_2  w-full h-screen space-y-10 ">
+                                <div className=" frame_slide_2 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/3.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>White Gum 001</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Norda</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/6.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Ski Mask - Storm Blue</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>JJJJound x Descente</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/9.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Zen Sherpa Jacket</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Captain's Zen Garden</h2>
                                     </div>
                                 </div>
-                                <div className=" frame_slide_3  w-full h-screen space-y-10 ">
+                                <div className=" frame_slide_3 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/12.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'> Shell Jacket</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>66°North</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/4.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Loose Tapered Ridge Pants</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Gramicci</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="	https://cdn.telescope.fyi/landing/about/7.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Early Winter Gloves</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/13.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Ciao Socks</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
                                     </div>
                                 </div>
-                                <div className=" frame_slide_4  w-full h-screen space-y-10 ">
+                                <div className=" frame_slide_4 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/13.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Ciao Socks</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/4.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Loose Tapered Ridge Pants</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Gramicci</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="h-[60vh] w-full">
+                                        <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Pas Normal Studios</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>PNS x Salomon Daypack</h2>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -688,36 +649,26 @@ const FrameA = () => {
                 </div>
                 <div className=" last_vec opacity-0 z-[20] pointer-events-none flex absolute items-center w-full justify-center h-screen">
                     <div
-                        ref={vectorRef1}
-                        onClick={openVector1}
                         style={{
                             clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
                         }}
-                        className=" absolute left-[15%]   w-[22vw]  h-[80vh] overflow-hidden bg-blue-400 ">
-                        <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1753808645481-070fba323120?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                        <RiCloseLine onClick={closeVector1} className='absolute top-5 right-5 cursor-pointer text-white' size={34} />
+                        className=" absolute left-[15%]   w-[22vw]  h-[80vh] overflow-hidden  ">
+                            <img className='w-full h-full' src="https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg" alt="" />
                     </div>
                     <div
-                        ref={vectorRef2}
-                        onClick={openVector2}
                         style={{
                             clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
                         }}
-                        className=" absolute left-[40%]   w-[22vw]  h-[80vh] overflow-hidden bg-blue-400 ">
-                        <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1753724933350-c2e0e2990445?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                        <RiCloseLine onClick={closeVector2} className='absolute top-5 right-5 cursor-pointer text-white' size={34} />
-
+                        className=" absolute left-[40%]   w-[22vw]  h-[80vh] overflow-hidden  ">
+                        <img className='w-full h-full object-cover' src="https://marketplace.canva.com/EAFGCWKTQnU/1/0/900w/canva-topaz-teal-vibrant-soft-blurry-editable-gradient-abstract-phone-wallpaper-B0ycwHvk7qs.jpg" alt="" />
                     </div>
                     <div
-                        ref={vectorRef3}
-                        onClick={openVector3}
                         style={{
                             clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
                         }}
-                        className=" absolute left-[65%]   w-[22vw]  h-[80vh] overflow-hidden bg-blue-400 ">
-                        <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1751768853626-3737132f25f7?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                        <RiCloseLine onClick={closeVector3} className='absolute top-5 right-5 cursor-pointer text-white' size={34} />
-
+                        className=" absolute left-[65%]   w-[22vw]  h-[80vh] overflow-hidden  ">
+                            
+                        <img className='w-full h-full object-cover' src="https://c4.wallpaperflare.com/wallpaper/113/27/732/soft-gradient-gradient-solid-color-hd-wallpaper-preview.jpg" alt="" />
                     </div>
                 </div>
             </div>
