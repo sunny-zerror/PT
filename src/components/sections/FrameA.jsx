@@ -11,8 +11,39 @@ const FrameA = () => {
     const logoRef = useRef(null);
     const logoRef2 = useRef(null);
     const clipRef = useRef(null);
+    const canvasRef = useRef(null);
+    const frameRef = useRef(0);
+    const imageCache = useRef({});
+    const totalFrames = 83;
 
     useEffect(() => {
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Preload images
+        let loaded = 0;
+        for (let i = 1; i < totalFrames; i++) {
+            const padded = String(i).padStart(4, '0');
+            const src = `/frames/${padded}.jpg`;
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+                imageCache.current[i] = img;
+                loaded++;
+                if (loaded === totalFrames - 1) drawFrame(0); // Start at frame 0
+            };
+        }
+
+        const drawFrame = (index) => {
+            const img = imageCache.current[index];
+            if (!img) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+
+
         gsap.set(".logo_div", {
             y: 40,
             scale: 0.3
@@ -81,7 +112,7 @@ const FrameA = () => {
 
         gsap.to("body", {
             overflowY: "scroll",
-            delay: 8
+            delay: 7
         })
 
         ////////////////////////////////////
@@ -334,9 +365,15 @@ const FrameA = () => {
                 pointerEvents: "auto",
                 duration: 1,
             }, "pin10")
-
-
-        }, 100);
+            tl.to(frameRef, {
+                current: totalFrames - 1,
+                snap: 'current',
+                duration:4,
+                onUpdate: () => {
+                    drawFrame(Math.round(frameRef.current));
+                }
+            }, "pin11")
+        }, 7000);
 
         return () => clearTimeout(timeout);
 
@@ -466,7 +503,7 @@ const FrameA = () => {
                     <h2 className='text-sm'>Freelance 3D Graphic Designer</h2>
                 </div>
 
-                <div className=" slide_box_upside  w-[40vw] z-[10] absolute text-white   bottom-[-150%]  right-0 ">
+                <div className=" slide_box_upside  w-[40vw] z-[10] absolute text-white   bottom-[-150%]  right-5 ">
                     <h2 className='text-xl mb-6'>What I believe and follow</h2>
                     <h2 className='text-xl'>Brand as a Living System</h2>
                     <p className='text-4xl leading-none mb-10 mix_light'>A brand isn’t just a logo — it’s a living, evolving ecosystem. The strongest ones grow with their audience and stay rooted in purpose.</p>
@@ -648,28 +685,11 @@ const FrameA = () => {
                     </div>
                 </div>
                 <div className=" last_vec opacity-0 z-[20] pointer-events-none flex absolute items-center w-full justify-center h-screen">
-                    <div
-                        style={{
-                            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
-                        }}
-                        className=" absolute left-[15%]   w-[22vw]  h-[80vh] overflow-hidden  ">
-                            <img className='w-full h-full' src="https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg" alt="" />
-                    </div>
-                    <div
-                        style={{
-                            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
-                        }}
-                        className=" absolute left-[40%]   w-[22vw]  h-[80vh] overflow-hidden  ">
-                        <img className='w-full h-full object-cover' src="https://marketplace.canva.com/EAFGCWKTQnU/1/0/900w/canva-topaz-teal-vibrant-soft-blurry-editable-gradient-abstract-phone-wallpaper-B0ycwHvk7qs.jpg" alt="" />
-                    </div>
-                    <div
-                        style={{
-                            clipPath: "shape(nonzero from 69.4% 0%, curve to 70.77% 0.46% with 70.17% -0.02% / 70.66% 0.36%, curve to 71.18% 1.27% with 71.04% 0.7% / 71.18% 0.98%, line to 71.18% 49.3%, line to 97.69% 49.3%, curve to 99.85% 49.87% with 98.64% 49.19% / 99.52% 49.44%, curve to 100% 50.27% with 99.94% 50% / 99.99% 50.13%, curve to 99.89% 50.66% with 100.01% 50.4% / 99.97% 50.54%, curve to 97.7% 51.25% with 99.57% 51.1% / 98.68% 51.37%, curve to 85.71% 53.15% with 93.61% 51.64% / 89.6% 52.28%, curve to 70.61% 58% with 84.03% 53.53% / 78.06% 54.92%, curve to 45.93% 73.69% with 60.74% 62.11% / 52.33% 67.45%, curve to 37.6% 84.37% with 42.55% 77.05% / 39.76% 80.63%, curve to 32.32% 99.24% with 34.79% 89.16% / 33.02% 94.16%, curve to 31.76% 99.76% with 32.22% 99.44% / 32.02% 99.62%, curve to 30.84% 99.99% with 31.5% 99.89% / 31.18% 99.97%, curve to 29.87% 99.87% with 30.51% 100.02% / 30.17% 99.97%, curve to 29.16% 99.44% with 29.57% 99.78% / 29.32% 99.62%, line to 29.16% 51.3%, line to 2.03% 51.3%, curve to 0.74% 51.05% with 1.57% 51.3% / 1.11% 51.21%, curve to 0% 50.19% with 0.64% 51% / -0.03% 50.67%, curve to 1.49% 49.24% with 0.03% 49.76% / 0.64% 49.35%, line to 2.62% 49.13%, curve to 16.32% 46.86% with 7.3% 48.67% / 11.89% 47.91%, curve to 29.11% 42.87% with 20.76% 45.78% / 25.04% 44.44%, curve to 56.08% 25.1% with 44.63% 36.77% / 54.5% 26.74%, curve to 68.05% 1.34% with 67.92% 12.82% / 68.42% 2.02%, curve to 68.03% 0.68% with 67.93% 1.13% / 67.92% 0.9%, curve to 68.55% 0.21% with 68.12% 0.5% / 68.31% 0.33%, curve to 69.4% 0% with 68.79% 0.09% / 69.09% 0.02%, close)"
-                        }}
-                        className=" absolute left-[65%]   w-[22vw]  h-[80vh] overflow-hidden  ">
-                            
-                        <img className='w-full h-full object-cover' src="https://c4.wallpaperflare.com/wallpaper/113/27/732/soft-gradient-gradient-solid-color-hd-wallpaper-preview.jpg" alt="" />
-                    </div>
+                    <canvas
+                        ref={canvasRef}
+                        className="w-full h-full"
+                        style={{ display: 'block', pointerEvents: 'none' }}
+                    />
                 </div>
             </div>
             <div className="w-full  translate-y-[10vh] h-[20vh] p-10  flex items-center justify-between">

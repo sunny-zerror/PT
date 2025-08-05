@@ -21,7 +21,7 @@ const LenisScroll = ({ children }) => {
       };
 
       rafRef.current = requestAnimationFrame(raf);
-    }, 100); 
+    }, 7000); 
 
     return () => {
       clearTimeout(timeout);
