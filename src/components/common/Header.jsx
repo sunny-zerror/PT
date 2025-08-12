@@ -27,7 +27,7 @@ const Header = () => {
             <h2 className=' lin opacity-0 text-xl'>Contact</h2>
           </div>
           <div className="mt-5 capitalize flex flex-col text-end items-end">
-            {["instagram", "linkedin", "github"].map((label,i) => (
+            {["Instagram", "LinkedIn", "Behance"].map((label,i) => (
               <div key={i}  className=" w-fit overflow-hidden group flex gap-1 items-center justify-end cursor-pointer relative transition duration-300">
                 <h2
                   key={label}

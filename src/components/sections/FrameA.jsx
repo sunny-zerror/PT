@@ -44,76 +44,76 @@ const FrameA = () => {
         };
 
 
-        // gsap.set(".logo_div", {
-        //     y: 40,
-        //     scale: 0.3
-        // })
-        // gsap.set("body", {
-        //     overflow: "hidden"
-        // })
-        // gsap.to(".loader_left", {
-        //     left: "3%",
-        //     duration: 3.2,
-        //     ease: "expo.inOut",
-        //     delay: .8
-        // })
-        // gsap.to(".loader_right", {
-        //     right: "3%",
-        //     duration: 3.2,
-        //     ease: "expo.inOut",
-        //     delay: .8
-        // })
+        gsap.set(".logo_div", {
+            y: 40,
+            scale: 0.3
+        })
+        gsap.set("body", {
+            overflow: "hidden"
+        })
+        gsap.to(".loader_left", {
+            left: "3%",
+            duration: 3.2,
+            ease: "expo.inOut",
+            delay: .8
+        })
+        gsap.to(".loader_right", {
+            right: "3%",
+            duration: 3.2,
+            ease: "expo.inOut",
+            delay: .8
+        })
 
-        // gsap.set(".clip_container", {
-        //     scale: .3,
-        //     top: "100%",
-        //     transformOrigin: "50% 66%"
-        // })
-        // gsap.to(".logo_div", {
-        //     y: 0,
-        //     scale: 1,
-        //     duration: 1.3,
-        //     ease: "expo.inOut",
-        //     delay: 4.4
-        // })
-        // gsap.to(".clip_container", {
-        //     top: "5%",
-        //     duration: 2.2,
-        //     ease: "expo.inOut",
-        //     delay: 2.2
-        // })
-        // gsap.to(".clip_container", {
-        //     top: 0,
-        //     scale: 1,
-        //     duration: 1.5,
-        //     ease: "expo.inOut",
-        //     delay: 4.2
-        // })
-        // gsap.to(".loader_left, .loader_right, .percent_inc", {
-        //     opacity: 0,
-        //     duration: 1,
-        //     ease: "expo.inOut",
-        //     delay: 4
-        // })
-        // gsap.fromTo(".short_desc p, .short_desc h2", {
-        //     y: 100
-        // }, {
-        //     y: 0,
-        //     duration: 2,
-        //     ease: "expo.inOut",
-        //     delay: 4.7
-        // })
-        // gsap.to(".loader_left, .loader_right, .percent_inc", {
-        //     display: "none",
-        //     duration: 0,
-        //     ease: "expo.inOut",
-        //     delay: 5.5
-        // })
+        gsap.set(".clip_container", {
+            scale: .3,
+            top: "100%",
+            transformOrigin: "50% 66%"
+        })
+        gsap.to(".logo_div", {
+            y: 0,
+            scale: 1,
+            duration: 1.3,
+            ease: "expo.inOut",
+            delay: 4.4
+        })
+        gsap.to(".clip_container", {
+            top: "5%",
+            duration: 2.2,
+            ease: "expo.inOut",
+            delay: 2.2
+        })
+        gsap.to(".clip_container", {
+            top: 0,
+            scale: 1,
+            duration: 1.5,
+            ease: "expo.inOut",
+            delay: 4.2
+        })
+        gsap.to(".loader_left, .loader_right, .percent_inc", {
+            opacity: 0,
+            duration: 1,
+            ease: "expo.inOut",
+            delay: 4
+        })
+        gsap.fromTo(".short_desc p, .short_desc h2", {
+            y: 100
+        }, {
+            y: 0,
+            duration: 2,
+            ease: "expo.inOut",
+            delay: 4.7
+        })
+        gsap.to(".loader_left, .loader_right, .percent_inc", {
+            display: "none",
+            duration: 0,
+            ease: "expo.inOut",
+            delay: 5.5
+        })
 
-        // gsap.to("body", {
-        //     overflowY: "scroll",
-        //     delay: 7
-        // })
+        gsap.to("body", {
+            overflowY: "scroll",
+            delay: 7
+        })
 
         ////////////////////////////////////
         const timeout = setTimeout(() => {
@@ -310,7 +310,7 @@ const FrameA = () => {
 
             tl.to(".frame_slide_1", {
                 transform: "translateY(-90vh)",
-                delay:1.85,
+                delay: 1.85,
                 duration: 4,
                 onComplete: () => {
                     gsap.set(".cont", {
@@ -332,17 +332,17 @@ const FrameA = () => {
                 }
             }, "pin6")
             tl.to(".frame_slide_2", {
-                delay:1.85,
+                delay: 1.85,
                 transform: "translateY(-60vw)",
                 duration: 4
             }, "pin6")
             tl.to(".frame_slide_3", {
-                delay:1.85,
+                delay: 1.85,
                 transform: "translateY(-110vh)",
                 duration: 4
             }, "pin6")
             tl.to(".frame_slide_4", {
-                delay:1.85,
+                delay: 1.85,
                 transform: "translateY(-90vh)",
                 duration: 4
             }, "pin6")
@@ -372,12 +372,12 @@ const FrameA = () => {
             tl.to(frameRef, {
                 current: totalFrames - 1,
                 snap: 'current',
-                duration:4,
+                duration: 4,
                 onUpdate: () => {
                     drawFrame(Math.round(frameRef.current));
                 }
             }, "pin11")
-        }, 100);
+        }, 7000);
 
         return () => clearTimeout(timeout);
 
@@ -439,7 +439,7 @@ const FrameA = () => {
                         <div className=" short_desc w-full px-10 py-4  overflow-hidden text-[16px] flex items-center justify-between">
                             <p>3D ideas, big projects</p>
                             <h2>Creative Director</h2>
-                            <p>Freelance 3D Graphic Designer</p>
+                            <p>Bui</p>
                             <h2 className="vvds_light">Mumbai, India.</h2>
                         </div>
                     </div>
@@ -489,8 +489,8 @@ const FrameA = () => {
                         <div className=" short_desc w-full px-10 py-4 text-[#fffbf3]  overflow-hidden text-[16px] flex items-center justify-between">
                             <p>3D ideas, big projects</p>
                             <h2>Creative Director</h2>
-                            <p>Freelance 3D Graphic Designer</p>
-                            <h2 className='vvds_light' >Mumbai, India.</h2>
+                            <p>Bui</p>
+                            <h2 className="vvds_light">Mumbai, India.</h2>
                         </div>
                     </div>
                 </div>
@@ -502,27 +502,27 @@ const FrameA = () => {
                 <div className=" slide_box z-[10] -translate-x-1/2 aspect-square w-[25vw] p-10 text-[1.2vw] absolute h-[30vw] bg-[#FFFBF3] bottom-0  left-[125%] flex flex-col justify-between items-center  text-center ">
                     <div className=" center flex-col gap-7">
                         <img src="	https://www.archi-malinstudio.com/_vercel/image?url=%2Fimg%2Fpicto%2Fflocon.svg&w=320&q=100" alt="" />
-                        <p className=' xl:text-3xl 2xl:text-4xl mix_light'>I’m Piran — a brand strategist driven by curiosity, shaped by Mumbai, and grounded in thoughtful design.</p>
+                        <p className=' xl:text-3xl 2xl:text-4xl mix_light'>Helping brands grow by making their story clear. Together, we create stories that matter and strategies that work.</p>
                     </div>
-                    <h2 className='text-sm'>Freelance 3D Graphic Designer</h2>
+                    <h2 className='text-base'>The journey starts here.</h2>
                 </div>
 
                 <div className=" slide_box_upside  w-[40vw] z-[10] absolute text-white   bottom-[-150%]  right-5 ">
-                    <h2 className='text-xl mb-6'>What I believe and follow</h2>
-                    <h2 className='text-xl'>Brand as a Living System</h2>
-                    <p className='text-4xl leading-none mb-10 mix_light'>A brand isn’t just a logo — it’s a living, evolving ecosystem. The strongest ones grow with their audience and stay rooted in purpose.</p>
+                    <h2 className='text-xl mb-6'>How I See Brand Building</h2>
+                    <h2 className='text-xl'>Brand as a System</h2>
+                    <p className='text-4xl leading-none mb-10 mix_light'>A brand isn’t just a logo or product it’s a living, evolving ecosystem made up of stories, values, and people. I help brands grow by staying connected to their true purpose while adapting to their audience.</p>
                     <h2 className='text-xl'>Story and Structure</h2>
-                    <p className='text-4xl leading-none mb-10 mix_light'>Story creates meaning. Structure creates momentum. I build brands where emotion and systems work together — with intention, not accident.</p>
+                    <p className='text-4xl leading-none mb-10 mix_light'>Story gives meaning; structure drives progress. I combine emotional storytelling with smart systems so brands don’t just exist, they move forward with intention.</p>
                     <h2 className='text-xl'>Ethical Innovation</h2>
-                    <p className='text-4xl leading-none mb-10 mix_light'>Innovation without intention is just noise. I design with awareness — of people, context, and long-term impact</p>
+                    <p className='text-4xl leading-none mb-10 mix_light'>Innovation without purpose is just noise. I create with awareness of people, culture, and lasting impact to ensure meaningful growth.</p>
                 </div>
 
                 <div className=" frameB brightness-100   w-full h-screen z-[12] bg-[#FFFBF3] absolute top-0 left-[100%]">
 
                     <div className=" absolute top-0 left-0 spn_slide w-[75%]">
-                        <h2 className='text-black text-[4.5vw] p-4 leading-none'>
+                        <h2 className='text-black text-[4vw] p-4 leading-none'>
                             <span className='spn_1'>
-                                To enhance your , elevating them into a striking 2D representation capable of captivating your clients and bringing your boldest architectural visions to life.
+                                Where story and strategy work together to create real, lasting impact. My work focuses on clarity and purpose, making sure every project connects deeply and grows naturally. What follows are examples of this approach in action.
                             </span>
                             <span className='spn_2 opacity-[.1]'>
                                 Our expertise lies in crafting highly detailed architectural renderings, where every element is expressed with precision. Our mission is to capture the very essence of
