@@ -492,7 +492,7 @@ const FrameA = () => {
                 </div>
                 <div
                     className=" profile_pic absolute z-[8] bottom-[-100%] absolute_x_center w-[35%]  h-[80vh]">
-                    <img className='object-cover brightness-[.9] w-full h-full' src="/images/Piran_pic.png" alt="" />
+                    <img className='object-cover brightness-[.9] w-full h-full' src="/images/Piran_pic.webp" alt="" />
                 </div>
 
                 <div className=" slide_box z-[10] -translate-x-1/2 aspect-square w-[25vw] p-10 text-[1.2vw] absolute h-[30vw] bg-[#FFFBF3] bottom-0  left-[125%] flex flex-col justify-between items-center  text-center ">
@@ -539,21 +539,21 @@ const FrameA = () => {
                     <div className=" spn_img_slider px-5 w-[23%] text-black absolute right-0 top-0">
                         <div className="w-full">
                             <div className=" aspect-square h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/livre.jpg" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/project/project1.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>Florida</h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'>A24</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/1.webp" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/project/project2.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>Gia Vin & Grill</h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'>Restaurant</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/poffy.jpg" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/project/project3.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>Black V2 Hoodie</h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'>Seventh</h2>
@@ -582,7 +582,7 @@ const FrameA = () => {
 
                                     <div className="move_proj  z-[999] translate-x-[76.6vw] bg-[#fffbf3] translate-y-[-100vh]  w-[88%] ">
                                         <div className=" move_proj_inner  aspect-square h-[22vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/t-shirt.jpg" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project4.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>MothTech T-Shirt</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Satisfy</h2>
@@ -591,14 +591,14 @@ const FrameA = () => {
 
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/8.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project5.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Gel Quantum 360 VIII</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Asics x Lack of Guidance</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project6.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Pas Normal Studios</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>PNS x Salomon Daypack</h2>
@@ -607,21 +607,28 @@ const FrameA = () => {
                                 <div className=" frame_slide_2 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/3.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project7.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>White Gum 001</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Norda</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/6.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project8.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Ski Mask - Storm Blue</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>JJJJound x Descente</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/9.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project9.webp" alt="" />
+                                        </div>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Zen Sherpa Jacket</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Captain's Zen Garden</h2>
+                                    </div>
+                                    <div className="w-full ">
+                                        <div className="aspect-square h-[25vw] w-full">
+                                            <img className='w-full h-full object-cover' src="/images/project/project2.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Zen Sherpa Jacket</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Captain's Zen Garden</h2>
@@ -630,28 +637,28 @@ const FrameA = () => {
                                 <div className=" frame_slide_3 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/12.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project10.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'> Shell Jacket</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>66°North</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/4.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project11.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Loose Tapered Ridge Pants</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Gramicci</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="	https://cdn.telescope.fyi/landing/about/7.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project12.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Early Winter Gloves</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/13.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project13.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Ciao Socks</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
@@ -660,21 +667,21 @@ const FrameA = () => {
                                 <div className=" frame_slide_4 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/13.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project14.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Ciao Socks</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/4.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project15.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Loose Tapered Ridge Pants</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Gramicci</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="https://cdn.telescope.fyi/landing/about/11.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/project/project1.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Pas Normal Studios</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>PNS x Salomon Daypack</h2>
