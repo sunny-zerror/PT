@@ -44,76 +44,76 @@ const FrameA = () => {
         };
 
 
-        gsap.set(".logo_div", {
-            y: 40,
-            scale: 0.3
-        })
-        gsap.set("body", {
-            overflow: "hidden"
-        })
-        gsap.to(".loader_left", {
-            left: "3%",
-            duration: 3.2,
-            ease: "expo.inOut",
-            delay: .8
-        })
-        gsap.to(".loader_right", {
-            right: "3%",
-            duration: 3.2,
-            ease: "expo.inOut",
-            delay: .8
-        })
+        // gsap.set(".logo_div", {
+        //     y: 40,
+        //     scale: 0.3
+        // })
+        // gsap.set("body", {
+        //     overflow: "hidden"
+        // })
+        // gsap.to(".loader_left", {
+        //     left: "3%",
+        //     duration: 3.2,
+        //     ease: "expo.inOut",
+        //     delay: .8
+        // })
+        // gsap.to(".loader_right", {
+        //     right: "3%",
+        //     duration: 3.2,
+        //     ease: "expo.inOut",
+        //     delay: .8
+        // })
 
-        gsap.set(".clip_container", {
-            scale: .3,
-            top: "100%",
-            transformOrigin: "50% 66%"
-        })
-        gsap.to(".logo_div", {
-            y: 0,
-            scale: 1,
-            duration: 1.3,
-            ease: "expo.inOut",
-            delay: 4.4
-        })
-        gsap.to(".clip_container", {
-            top: "5%",
-            duration: 2.2,
-            ease: "expo.inOut",
-            delay: 2.2
-        })
-        gsap.to(".clip_container", {
-            top: 0,
-            scale: 1,
-            duration: 1.5,
-            ease: "expo.inOut",
-            delay: 4.2
-        })
-        gsap.to(".loader_left, .loader_right, .percent_inc", {
-            opacity: 0,
-            duration: 1,
-            ease: "expo.inOut",
-            delay: 4
-        })
-        gsap.fromTo(".short_desc p, .short_desc h2", {
-            y: 100
-        }, {
-            y: 0,
-            duration: 2,
-            ease: "expo.inOut",
-            delay: 4.7
-        })
-        gsap.to(".loader_left, .loader_right, .percent_inc", {
-            display: "none",
-            duration: 0,
-            ease: "expo.inOut",
-            delay: 5.5
-        })
+        // gsap.set(".clip_container", {
+        //     scale: .3,
+        //     top: "100%",
+        //     transformOrigin: "50% 66%"
+        // })
+        // gsap.to(".logo_div", {
+        //     y: 0,
+        //     scale: 1,
+        //     duration: 1.3,
+        //     ease: "expo.inOut",
+        //     delay: 4.4
+        // })
+        // gsap.to(".clip_container", {
+        //     top: "5%",
+        //     duration: 2.2,
+        //     ease: "expo.inOut",
+        //     delay: 2.2
+        // })
+        // gsap.to(".clip_container", {
+        //     top: 0,
+        //     scale: 1,
+        //     duration: 1.5,
+        //     ease: "expo.inOut",
+        //     delay: 4.2
+        // })
+        // gsap.to(".loader_left, .loader_right, .percent_inc", {
+        //     opacity: 0,
+        //     duration: 1,
+        //     ease: "expo.inOut",
+        //     delay: 4
+        // })
+        // gsap.fromTo(".short_desc p, .short_desc h2", {
+        //     y: 100
+        // }, {
+        //     y: 0,
+        //     duration: 2,
+        //     ease: "expo.inOut",
+        //     delay: 4.7
+        // })
+        // gsap.to(".loader_left, .loader_right, .percent_inc", {
+        //     display: "none",
+        //     duration: 0,
+        //     ease: "expo.inOut",
+        //     delay: 5.5
+        // })
 
-        gsap.to("body", {
-            overflowY: "scroll",
-            delay: 7
-        })
+        // gsap.to("body", {
+        //     overflowY: "scroll",
+        //     delay: 7
+        // })
 
         ////////////////////////////////////
         const timeout = setTimeout(() => {
@@ -304,12 +304,13 @@ const FrameA = () => {
             }, "pin6")
 
             tl.to(".frame_slider", {
-                top: "-100vh",
+                top: "-110vh",
                 duration: 2,
             }, "pin6")
 
             tl.to(".frame_slide_1", {
                 transform: "translateY(-90vh)",
+                delay:1.85,
                 duration: 4,
                 onComplete: () => {
                     gsap.set(".cont", {
@@ -329,19 +330,22 @@ const FrameA = () => {
                         backgroundColor: "transparent"
                     })
                 }
-            }, "pin7")
+            }, "pin6")
             tl.to(".frame_slide_2", {
+                delay:1.85,
                 transform: "translateY(-60vw)",
                 duration: 4
-            }, "pin7")
+            }, "pin6")
             tl.to(".frame_slide_3", {
+                delay:1.85,
                 transform: "translateY(-110vh)",
                 duration: 4
-            }, "pin7")
+            }, "pin6")
             tl.to(".frame_slide_4", {
+                delay:1.85,
                 transform: "translateY(-90vh)",
                 duration: 4
-            }, "pin7")
+            }, "pin6")
 
             tl.to(".cont", {
                 width: "20vh",
@@ -373,7 +377,7 @@ const FrameA = () => {
                     drawFrame(Math.round(frameRef.current));
                 }
             }, "pin11")
-        }, 7000);
+        }, 100);
 
         return () => clearTimeout(timeout);
 
