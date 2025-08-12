@@ -33,7 +33,7 @@ const Header = () => {
                   key={label}
                   className='cursor-pointer lin opacity-0  '
                 >
-                  <span className=' group-hover:w-[75%] w-0 cursor-pointer transition-all duration-300 absolute h-[2px] bg-black/80 bottom-0' ></span>
+                  <span className=' group-hover:w-[100%] w-0 cursor-pointer transition-all duration-300 absolute h-[2px] bg-black/80 bottom-0' ></span>
                   {label}
                 </h2>
                 <img className='w-3 lin opacity-0  ' src="https://www.archi-malinstudio.com/img/arrow.svg" alt="" />
