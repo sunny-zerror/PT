@@ -391,7 +391,7 @@ const FrameA = () => {
             }, "pin12");
 
             tl.to(".india_gate", {
-                bottom: "2vh",
+                bottom: "5vh",
             }, "pin12");
 
             tl.to(".sticker", {
