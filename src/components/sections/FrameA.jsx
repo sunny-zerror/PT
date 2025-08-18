@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { RiBehanceLine, RiCloseLine, RiInstagramLine, RiLinkedinLine } from '@remixicon/react';
+import { RiBehanceLine, RiInstagramLine, RiLinkedinLine } from '@remixicon/react';
 import { CustomEase } from 'gsap/dist/CustomEase';
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin';
 gsap.registerPlugin(ScrollTrigger, CustomEase, MotionPathPlugin);
@@ -117,6 +117,12 @@ const FrameA = () => {
 
         gsap.fromTo(".birds", { y: 10 }, { y: 0, duration: 1, ease: "power1.inOut", repeat: -1, yoyo: true })
 
+        gsap.to(".rotate", {
+            rotate: 360,
+            duration: 15,
+            repeat: -1,
+            ease: "linear"
+        })
 
         ////////////////////////////////////
         const timeout = setTimeout(() => {
@@ -274,7 +280,7 @@ const FrameA = () => {
             tl.to(".frame_slider", {
                 top: "10vw",
                 duration: 2.12,
-                delay: .867,
+                delay: .8,
             }, "pin5.5");
 
             const path = [
@@ -288,33 +294,33 @@ const FrameA = () => {
                     autoRotate: false,
                 },
                 width: "100%",
-                duration: 2,
+                duration: 4,
             }, "pin6")
 
             tl.to(".move_proj_inner", {
                 height: "25vw",
-                duration: 2,
+                duration: 4,
             }, "pin6");
 
             tl.to(".spn_img_slider", {
                 top: "-90vw",
-                duration: 3,
+                duration: 4,
             }, "pin6");
 
             tl.to(".frameB", {
                 filter: "brightness(.3)",
-                duration: 2,
+                duration: 4,
             }, "pin6")
 
             tl.to(".frame_slider", {
                 top: "-110vh",
-                duration: 2,
+                duration: 4,
             }, "pin6")
 
             tl.to(".frame_slide_1", {
                 transform: "translateY(-43vw)",
-                delay: 1.85,
-                duration: 4,
+                delay: 3.9,
+                duration: 6,
                 onComplete: () => {
                     gsap.set(".cont", {
                         overflow: "hidden",
@@ -335,19 +341,19 @@ const FrameA = () => {
                 }
             }, "pin6")
             tl.to(".frame_slide_2", {
-                delay: 1.85,
+                delay: 3.9,
                 transform: "translateY(-60vw)",
-                duration: 4
+                duration: 6
             }, "pin6")
             tl.to(".frame_slide_3", {
-                delay: 1.85,
+                delay: 3.9,
                 transform: "translateY(-55vw)",
-                duration: 4
+                duration: 6
             }, "pin6")
             tl.to(".frame_slide_4", {
-                delay: 1.85,
+                delay: 3.9,
                 transform: "translateY(-43vw)",
-                duration: 4
+                duration: 6
             }, "pin6")
 
             tl.to(".cont", {
@@ -381,13 +387,29 @@ const FrameA = () => {
             }, "pin11")
 
             tl.to(".img_frame_slide_parent", {
-                right: 0,
-                duration: 4,
+                duration: 1,
+                opacity: 1,
+            }, "pin11.5");
+
+            tl.to(".img_frame_slide_parent", {
+                duration: 3,
+                width: "101vw",
+                clipPath: "shape(nonzero from 0% 86.54%, line to 0% 21.73%, curve to 0% 0.04% with 0% 21.73% / 0% 1.18%, curve to 4.92% 0.04% with 0% -0.05% / 4.92% 0.04%, line to 97.34% 0.04%, curve to 99.95% 0.04% with 97.34% 0.04% / 99.83% 0.04%, curve to 99.95% 13.62% with 100.07% 0.04% / 99.95% 13.62%, line to 99.95% 78.4%, curve to 99.95% 99.95% with 99.95% 78.4% / 99.98% 96.13%, curve to 95.21% 99.95% with 99.95% 100.04% / 95.21% 99.95%, line to 5.63% 99.95%, curve to 0% 99.95% with 5.63% 99.95% / 0% 100.06%, curve to 0% 86.54% with -0% 96.07% / 0% 86.54%, close)",
+                height: "101vh",
+                delay: 1,
             }, "pin11.5");
 
             tl.to(".img_frame_slide_child", {
-                duration: 12,
-                transform: "translateX(-200vw)"
+                duration: 2,
+                opacity: 1,
+                delay: 1,
+            }, "pin11.5");
+
+
+            tl.to(".img_frame_slide_child", {
+                duration: 14,
+                delay: 0.2,
+                transform: "translateX(-199vw)"
             }, "pin12");
 
             tl.to(".india_gate", {
@@ -454,42 +476,42 @@ const FrameA = () => {
             tl.to(".piran_picc", {
                 right: "-40vw",
                 duration: 3,
-                delay: 12,
+                delay: 14,
             }, "pin12");
 
             tl.to(".church", {
                 left: "38%",
                 duration: 3,
-                delay: 12,
+                delay: 14,
             }, "pin12");
 
             tl.to(".bgimg3", {
                 bottom: "60%",
                 opacity: 0,
                 duration: 3,
-                delay: 12,
+                delay: 14,
             }, "pin12");
 
             tl.to(".piran_txt", {
                 bottom: "30%",
                 duration: 3,
-                delay: 12,
+                delay: 14,
             }, "pin12");
 
             tl.to(".footer", {
                 bottom: 0,
                 duration: 3,
-                delay: 12,
+                delay: 14,
             }, "pin12");
 
             tl.to(".bridge", {
                 bottom: "-25%",
                 duration: 3,
-                delay: 12,
+                delay: 14,
             }, "pin12");
 
 
-        }, 7000);
+        }, 100);
 
         return () => clearTimeout(timeout);
 
@@ -611,10 +633,13 @@ const FrameA = () => {
                     <img className='object-cover brightness-[.9] w-full h-full' src="/images/Piran_pic.webp" alt="" />
                 </div>
 
-                <div className=" slide_box z-[10] -translate-x-1/2 aspect-square w-[25vw] p-10 text-[1.2vw] absolute h-[30vw] bg-[#FFFBF3] bottom-0  left-[125%] flex flex-col justify-between items-center  text-center ">
-                    <div className=" center flex-col gap-7">
-                        <img src="	https://www.archi-malinstudio.com/_vercel/image?url=%2Fimg%2Fpicto%2Fflocon.svg&w=320&q=100" alt="" />
-                        <p className=' xl:text-3xl 2xl:text-4xl mix_light'>Helping brands grow by making their story clear. Together, we create stories that matter and strategies that work.</p>
+                <div className=" slide_box z-[10] -translate-x-1/2 aspect-square w-[26vw] p-10 text-[1.2vw] absolute h-[30vw] bg-[#FFFBF3] bottom-0  left-[125%] flex flex-col justify-between items-center  text-center ">
+                    <img src="	https://www.archi-malinstudio.com/_vercel/image?url=%2Fimg%2Fpicto%2Fflocon.svg&w=320&q=100" alt="" />
+                    <div className=" center flex-col gap-5">
+                        <p className=' xl:text-3xl 2xl:text-4xl mix_light'>
+                            Helping brands grow by making their story clear.</p>
+                        <p className=' mt-1 xl:text-3xl 2xl:text-4xl mix_light'>
+                            Together, we create stories that matter and strategies that work.</p>
                     </div>
                     <h2 className='text-xl'>The journey starts here.</h2>
                 </div>
@@ -696,7 +721,7 @@ const FrameA = () => {
                                 <div className=" frame_slide_1  w-full h-screen space-y-10 bg-[#FFFBF3]">
 
 
-                                    <div className="move_proj  z-[999] translate-x-[76.6vw] bg-[#fffbf3] translate-y-[-100vh]  w-[88%] ">
+                                    <div className="move_proj  z-[999] translate-x-[77vw] bg-[#fffbf3] translate-y-[-100vh]  w-[87.5%] ">
                                         <div className=" move_proj_inner  aspect-square h-[22vw] w-full">
                                             <img className='w-full h-full object-cover' src="/images/project/project4.webp" alt="" />
                                         </div>
@@ -829,8 +854,10 @@ const FrameA = () => {
                     />
                 </div>
 
-                <div className=" img_frame_slide_parent absolute top-0 z-[999] right-[-100%]  w-[100vw] h-screen overflow-hidden ">
-                    <div className=" img_frame_slide_child  w-[300vw] h-full bg-[#19334B] relative">
+                <div
+                    style={{ clipPath: "shape(nonzero from 0% 86.58%, line to 0% 21.71%, curve to 38.77% 15.99% with 0% 21.71% / 28.28% 20.95%, curve to 45.94% 0% with 47.26% 11.97% / 45.94% 0%, line to 53.11% 0%, curve to 70.78% 11.12% with 53.11% 0% / 53.11% 7.41%, curve to 100% 13.6% with 81.43% 13.35% / 100% 13.6%, line to 100% 78.44%, curve to 69.77% 81.24% with 100% 78.44% / 79.36% 79.56%, curve to 53.53% 100% with 47.95% 85.06% / 53.53% 100%, line to 45.82% 100%, curve to 28.57% 89.06% with 45.82% 100% / 47.3% 93.03%, curve to 0% 86.58% with 18.16% 86.85% / 0% 86.58%, close)" }}
+                    className=" img_frame_slide_parent absolute_center absolute opacity-0 bg-black  z-[999]  w-[20.5vw] h-[88vh] overflow-hidden ">
+                    <div className=" img_frame_slide_child opacity-0 w-[300vw] h-full bg-[#19334B] relative">
                         {/* royalmile */}
                         <img className=' royal_mile w-[30vw] z-[99]  absolute top-0 left-[30%]' src="/images/Slider Frame/royalMile.png" alt="" />
 
@@ -886,17 +913,28 @@ const FrameA = () => {
                         <img className=' piran_txt w-[90vw] z-[16] absolute mix-blend-overlay  bottom-10 right-[4rem] ' src="/images/Slider Frame/PiranText.png" alt="" />
 
                         {/* footer  */}
-                        <div className=" footer  w-[100vw] right-0 absolute bottom-[-10vh] z-[9] bg-[#19334B] px-6 h-[10vh] flex items-center justify-between">
-                            <p className='text-white text-2xl'>pirantarapore@gmail.com</p>
+                        <div className=" footer  w-[100vw] text-white right-0 absolute bottom-[-15vh] z-[9] bg-[#19334B] px-6 h-[15vh] flex items-center justify-between">
+                            <div className="">
+
+                                <h3 className='text-white  vvds_light' >I’m open to collaborations, commissions, or a good conversation.</h3>
+                                <h3 className='text-white  vvds_light' >Email me at pirantarapora@gmail.com</h3>
+                            </div>
                             <div className="flex items-center gap-5">
-                                <div className="cursor-pointer  size-12 group hover:scale-90 transition duration-300 rounded-full text-[#19334B] center bg-[#D9D9D9]">
-                                    <RiInstagramLine className='group-hover:scale-125 transition duration-300' />
+                                <div className="cursor-pointer  size-10 group hover:scale-90 transition duration-300 rounded-full text-[#19334B] center bg-[#D9D9D9]">
+                                    <RiInstagramLine size={18} className='group-hover:scale-110 transition duration-300' />
                                 </div>
-                                <div className="cursor-pointer  size-12 group hover:scale-90 transition duration-300 rounded-full text-[#19334B] center bg-[#D9D9D9]">
-                                    <RiLinkedinLine className='group-hover:scale-125 transition duration-300' />
+                                <div className="cursor-pointer  size-10 group hover:scale-90 transition duration-300 rounded-full text-[#19334B] center bg-[#D9D9D9]">
+                                    <RiLinkedinLine size={18} className='group-hover:scale-110 transition duration-300' />
                                 </div>
-                                <div className="cursor-pointer  size-12 group hover:scale-90 transition duration-300 rounded-full text-[#19334B] center bg-[#D9D9D9]">
-                                    <RiBehanceLine className='group-hover:scale-125 transition duration-300' />
+                                <div className="cursor-pointer  size-10 group hover:scale-90 transition duration-300 rounded-full text-[#19334B] center bg-[#D9D9D9]">
+                                    <RiBehanceLine size={18} className='group-hover:scale-110 transition duration-300' />
+                                </div>
+                            </div>
+                            <div className=" ml-[8vh]  flex h-full items-center gap-5">
+                                <h3 className='vvds_light' >Copyright © 2025 . All rights reserved.</h3>
+                                <div className=" h-full center group cursor-pointer">
+                                    <img className='absolute group-hover:-rotate-45 transition duration-300' src="/logos/arrow-right.svg" alt="" />
+                                    <img className='rotate' src="/logos/contact_rotate.svg" alt="" />
                                 </div>
                             </div>
                         </div>
