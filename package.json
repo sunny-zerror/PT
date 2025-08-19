@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.6.0",
+        "@react-three/drei": "9.102.6",
+    "@react-three/fiber": "8.15.19",
     "gsap": "^3.12.7",
     "html-react-parser": "^5.2.2",
     "lenis": "^1.2.3",
     "next": "^15.2.2",
     "postcss-import": "^16.1.0",
     "react": "^18.3.1",
+    "three": "0.142.0",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {

@@ -511,7 +511,7 @@ const FrameA = () => {
             }, "pin12");
 
 
-        }, 100);
+        }, 7000);
 
         return () => clearTimeout(timeout);
 
