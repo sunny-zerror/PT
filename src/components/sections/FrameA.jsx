@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { RiBehanceLine, RiInstagramLine, RiLinkedinLine } from '@remixicon/react';
 import { CustomEase } from 'gsap/dist/CustomEase';
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin';
+import ProjectCardImage from '../Effect/ProjectCardImage';
 gsap.registerPlugin(ScrollTrigger, CustomEase, MotionPathPlugin);
 
 const FrameA = () => {
@@ -44,9 +45,12 @@ const FrameA = () => {
         };
 
 
-        gsap.set(".logo_div", {
+        gsap.set(".animate_logo_div", {
             y: 40,
             scale: 0.3
+        })
+        gsap.set(".logo_div", {
+            opacity: 0
         })
         gsap.set("body", {
             overflow: "hidden"
@@ -55,13 +59,13 @@ const FrameA = () => {
             left: "3%",
             duration: 3.2,
             ease: "expo.inOut",
-            delay: .8
+            delay: .6
         })
         gsap.to(".loader_right", {
             right: "3%",
             duration: 3.2,
             ease: "expo.inOut",
-            delay: .8
+            delay: .6
         })
 
         gsap.set(".clip_container", {
@@ -69,7 +73,7 @@ const FrameA = () => {
             top: "100%",
             transformOrigin: "50% 66%"
         })
-        gsap.to(".logo_div", {
+        gsap.to(".animate_logo_div", {
             y: 0,
             scale: 1,
             duration: 1.3,
@@ -77,10 +81,10 @@ const FrameA = () => {
             delay: 4.4
         })
         gsap.to(".clip_container", {
-            top: "5%",
-            duration: 2.2,
+            top: "0%",
+            duration: 2.1,
             ease: "expo.inOut",
-            delay: 2.2
+            delay: 2
         })
         gsap.to(".clip_container", {
             top: 0,
@@ -103,8 +107,14 @@ const FrameA = () => {
             ease: "expo.inOut",
             delay: 4.7
         })
-        gsap.to(".loader_left, .loader_right, .percent_inc", {
+        gsap.to(".loader_left, .loader_right, .percent_inc, .animate_logo_div ,.animate_logo_div_parent", {
             display: "none",
+            duration: 0,
+            ease: "expo.inOut",
+            delay: 5.5
+        })
+        gsap.to(".logo_div", {
+            opacity: 1,
             duration: 0,
             ease: "expo.inOut",
             delay: 5.5
@@ -130,7 +140,7 @@ const FrameA = () => {
                 scrollTrigger: {
                     trigger: main_Ref.current,
                     start: "top top",
-                    end: window.innerHeight * 25,
+                    end: window.innerHeight * 28,
                     scrub: true,
                     pin: true,
                     pinSpacing: true,
@@ -397,6 +407,7 @@ const FrameA = () => {
                 clipPath: "shape(nonzero from 0% 86.54%, line to 0% 21.73%, curve to 0% 0.04% with 0% 21.73% / 0% 1.18%, curve to 4.92% 0.04% with 0% -0.05% / 4.92% 0.04%, line to 97.34% 0.04%, curve to 99.95% 0.04% with 97.34% 0.04% / 99.83% 0.04%, curve to 99.95% 13.62% with 100.07% 0.04% / 99.95% 13.62%, line to 99.95% 78.4%, curve to 99.95% 99.95% with 99.95% 78.4% / 99.98% 96.13%, curve to 95.21% 99.95% with 99.95% 100.04% / 95.21% 99.95%, line to 5.63% 99.95%, curve to 0% 99.95% with 5.63% 99.95% / 0% 100.06%, curve to 0% 86.54% with -0% 96.07% / 0% 86.54%, close)",
                 height: "101vh",
                 delay: 1,
+                pointerEvents: "auto",
             }, "pin11.5");
 
             tl.to(".img_frame_slide_child", {
@@ -469,8 +480,8 @@ const FrameA = () => {
                 right: "60vw",
             }, {
                 right: "4rem",
-                duration: 4,
-                delay: 6,
+                duration: 6,
+                delay: 7,
             }, "pin12");
 
             tl.to(".piran_picc", {
@@ -561,13 +572,27 @@ const FrameA = () => {
                     style={{
                         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
                     }}
-                    className=" bg-[#FFFBF3] absolute top-0 w-full h-[65vh] z-[10] flex items-end justify-center "
+                    className=" bg-[#FFFBF3] absolute top-0 w-full h-[65vh] z-[10] flex items-end justify-end  "
                 >
                     <div
-                        ref={logoRef}
-                        className=" absolute w-full ">
-                        <div className=" logo_div  center   w-full">
+                        className="animate_logo_div_parent absolute w-full h-fit ">
+                        <div className=" animate_logo_div  center  h-[16vw]   w-full">
                             <img className="w-[94.8%]" src="/logos/Logo_Dark.svg" alt="" />
+                        </div>
+
+                        <div className=" short_desc  w-full px-10 py-4  overflow-hidden text-[16px] flex items-center justify-between">
+                            <p>Where clarity drives creativity</p>
+                            <h2>Brand Systems Architect</h2>
+                            <p>From insight to impact</p>
+                            <h2 className="vvds_light">Mumbai, India.</h2>
+                        </div>
+                    </div>
+                    <div
+                        ref={logoRef}
+                        className=" absolute w-full h-fit ">
+                        <div className=" logo_div  center  h-[16vw]   w-full">
+                            {/* <img className="w-[94.8%]" src="/logos/Logo_Dark.svg" alt="" /> */}
+                            <ProjectCardImage imgUrl="/logos/Logo_Dark.png" />
                         </div>
 
                         <div className=" short_desc w-full px-10 py-4  overflow-hidden text-[16px] flex items-center justify-between">
@@ -613,12 +638,13 @@ const FrameA = () => {
                     />
                 </div>
 
-                <div className="log_par absolute w-full h-[65vh] ">
+                <div className="log_par absolute w-full h-[65vh] flex items-end justify-end ">
                     <div
                         ref={logoRef2}
-                        className=" absolute bottom-0 w-full z-[9]">
-                        <div className=" logo_div  center   w-full">
-                            <img className="w-[94.8%]" src="/logos/Logo_Light.svg" alt="" />
+                        className=" absolute bottom-0 w-full z-[9] h-fit">
+                        <div className=" logo_div  center  h-[16vw]   w-full">
+                            {/* <img className="w-[94.8%]" src="/logos/Logo_Dark.svg" alt="" /> */}
+                            <ProjectCardImage imgUrl="/logos/Logo_Light.png" />
                         </div>
                         <div className=" short_desc w-full px-10 py-4 text-[#fffbf3]  overflow-hidden text-[16px] flex items-center justify-between">
                             <p>Where clarity drives creativity</p>
@@ -703,7 +729,7 @@ const FrameA = () => {
 
                 </div>
                 <div className="frame_slider absolute top-[100%]  left-0 w-full   z-[14]">
-                    <div className="w-full h-[70vh] bg-transparent"></div>
+                    <div className="w-full h-[70vh] bg-transparent pointer-events-none"></div>
                     <div className="w-full h-[40vh] center flex-col gap-5 text-black bg-[#FFFBF3]">
                         <h2 className='uppercase  text-xl vvds_light'>Projects</h2>
                         <h2 className='capitalize text-6xl vvds_light'>Built on Purpose</h2>
@@ -856,7 +882,7 @@ const FrameA = () => {
 
                 <div
                     style={{ clipPath: "shape(nonzero from 0% 86.58%, line to 0% 21.71%, curve to 38.77% 15.99% with 0% 21.71% / 28.28% 20.95%, curve to 45.94% 0% with 47.26% 11.97% / 45.94% 0%, line to 53.11% 0%, curve to 70.78% 11.12% with 53.11% 0% / 53.11% 7.41%, curve to 100% 13.6% with 81.43% 13.35% / 100% 13.6%, line to 100% 78.44%, curve to 69.77% 81.24% with 100% 78.44% / 79.36% 79.56%, curve to 53.53% 100% with 47.95% 85.06% / 53.53% 100%, line to 45.82% 100%, curve to 28.57% 89.06% with 45.82% 100% / 47.3% 93.03%, curve to 0% 86.58% with 18.16% 86.85% / 0% 86.58%, close)" }}
-                    className=" img_frame_slide_parent absolute_center absolute opacity-0 bg-black  z-[999]  w-[20.5vw] h-[88vh] overflow-hidden ">
+                    className=" img_frame_slide_parent absolute_center absolute opacity-0 bg-black  z-[999]  w-[20.5vw] h-[88vh] overflow-hidden pointer-events-none ">
                     <div className=" img_frame_slide_child opacity-0 w-[300vw] h-full bg-[#19334B] relative">
                         {/* royalmile */}
                         <img className=' royal_mile w-[30vw] z-[99]  absolute top-0 left-[30%]' src="/images/Slider Frame/royalMile.png" alt="" />
