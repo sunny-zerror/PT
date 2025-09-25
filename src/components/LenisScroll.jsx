@@ -15,13 +15,25 @@ const LenisScroll = ({ children }) => {
 
       lenisRef.current = lenis;
 
+      // ✅ Restore scroll position if available
+      const savedY = localStorage.getItem("scrollY");
+      if (savedY) {
+        lenis.scrollTo(parseFloat(savedY), { immediate: true });
+      }
+
+      // ✅ Save scroll position on scroll
+      lenis.on("scroll", ({ scroll }) => {
+        localStorage.setItem("scrollY", scroll.toString());
+      });
+
+      // Start RAF
       const raf = (time) => {
         lenis.raf(time);
         rafRef.current = requestAnimationFrame(raf);
       };
 
       rafRef.current = requestAnimationFrame(raf);
-    }, 7000); 
+    }, 7000); // Delay init
 
     return () => {
       clearTimeout(timeout);

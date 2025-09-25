@@ -23,11 +23,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth;
-}
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   background-color: #fffbf3;
 }
 .mix_light {
@@ -58,4 +56,14 @@ body::-webkit-scrollbar {
 }
 .scrollbar_hide::-webkit-scrollbar {
   display: none;
+}
+
+
+
+
+
+
+
+.scroll-container {
+  transform: translateY(var(--scroll-top, 0));
 }

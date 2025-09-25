@@ -562,8 +562,10 @@ const FrameA = () => {
     return (
         <div>
             <div className="logo_paren fixed block  w-56 z-[999] p-5">
-                <div className="logo block overflow-hidden">
-                    <img className=' logo_image opacity-0 ' src="/logos/Logo_Dark.svg" alt="" />
+                <div
+                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="logo cursor-pointer block overflow-hidden">
+                    <img className=' w-[4vw] logo_image opacity-0 ' src="/logos/MenuLogo.svg" alt="" />
                 </div>
             </div>
             <div ref={main_Ref} className="h-screen w-full relative">
@@ -656,7 +658,7 @@ const FrameA = () => {
                 </div>
                 <div
                     className=" profile_pic absolute z-[8] bottom-[-100%] absolute_x_center w-[40%]  h-[80vh]">
-                    <img className='object-cover brightness-[.9] w-full h-full' src="/images/Piran_pic.webp" alt="" />
+                    <img className='object-cover brightness-[.8] w-full h-full' src="/images/Piran_pic.webp" alt="" />
                 </div>
 
                 <div className=" slide_box z-[10] -translate-x-1/2 aspect-square w-[26vw] p-10 text-[1.2vw] absolute h-[30vw] bg-[#FFFBF3] bottom-0  left-[125%] flex flex-col justify-between items-center  text-center ">
@@ -671,13 +673,13 @@ const FrameA = () => {
                 </div>
 
                 <div className=" slide_box_upside  w-[40vw] z-[10] absolute text-white   bottom-[-150%]  right-5 ">
-                    <h2 className='text-xl mb-6'>How I See Brand Building</h2>
-                    <h2 className='text-xl'>Brand as a System</h2>
+                    <h2 className='text-xl mb-6'>My Philosophy on Brands</h2>
+                    <h2 className='text-xl'>Brand as a Living System</h2>
                     <p className='text-4xl leading-none mb-10 mix_light'>A brand isn’t just a logo or product it’s a living, evolving ecosystem made up of stories, values, and people. I help brands grow by staying connected to their true purpose while adapting to their audience.</p>
                     <h2 className='text-xl'>Story and Structure</h2>
                     <p className='text-4xl leading-none mb-10 mix_light'>Story gives meaning; structure drives progress. I combine emotional storytelling with smart systems so brands don’t just exist, they move forward with intention.</p>
                     <h2 className='text-xl'>Ethical Innovation</h2>
-                    <p className='text-4xl leading-none mb-10 mix_light'>Innovation without purpose is just noise. I create with awareness of people, culture, and lasting impact to ensure meaningful growth.</p>
+                    <p className='text-4xl leading-none mb-10 mix_light'>Innovation without purpose is noise. I build with awareness of people, culture and impact ensuring growth that lasts.</p>
                 </div>
 
                 <div className=" frameB brightness-100   w-full h-screen z-[12] bg-[#FFFBF3] absolute top-0 left-[100%]">
@@ -705,25 +707,25 @@ const FrameA = () => {
 
                     <div className=" spn_img_slider px-5 w-[23%] text-black absolute right-0 top-0">
                         <div className="w-full">
-                            <div className=" aspect-square h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="/images/project/project1.webp" alt="" />
+                            <div className=" aspect-square h-[22vw] center bg-[#18293A] w-full">
+                                <img className='w-[40%]' src="/images/Projects/PointOf.png" alt="" />
                             </div>
-                            <h2 className='capitalize text-xl vvds_light mt-2'>Florida</h2>
-                            <h2 className=' text-sm vvds_light leading-none uppercase'>A24</h2>
+                            <h2 className='capitalize text-xl vvds_light mt-2'>Point Of </h2>
+                            <h2 className=' text-sm vvds_light leading-none uppercase'>Founder</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="/images/project/project2.webp" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/Projects/casaCarigar.jpg" alt="" />
                             </div>
-                            <h2 className='capitalize text-xl vvds_light mt-2'>Gia Vin & Grill</h2>
-                            <h2 className=' text-sm vvds_light leading-none uppercase'>Restaurant</h2>
+                            <h2 className='capitalize text-xl vvds_light mt-2'>Casa Carigar</h2>
+                            <h2 className=' text-sm vvds_light leading-none uppercase'>Co-Founder</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="/images/project/project3.webp" alt="" />
+                                <img className='w-full h-full object-contain' src="/images/Projects/Poonwala.png" alt="" />
                             </div>
-                            <h2 className='capitalize text-xl vvds_light mt-2'>Black V2 Hoodie</h2>
-                            <h2 className=' text-sm vvds_light leading-none uppercase'>Seventh</h2>
+                            <h2 className='capitalize text-xl vvds_light mt-2'>The Poonawala Group</h2>
+                            <h2 className=' text-sm vvds_light leading-none uppercase'></h2>
                         </div>
                     </div>
 
@@ -749,122 +751,123 @@ const FrameA = () => {
 
                                     <div className="move_proj  z-[999] translate-x-[77vw] bg-[#fffbf3] translate-y-[-100vh]  w-[87.5%] ">
                                         <div className=" move_proj_inner  aspect-square h-[22vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project4.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/jbl.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>MothTech T-Shirt</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Satisfy</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>JBL</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Community Management</h2>
                                     </div>
 
 
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project5.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/namah.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Gel Quantum 360 VIII</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Asics x Lack of Guidance</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>House Of Namah</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project6.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/goodrich.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Pas Normal Studios</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>PNS x Salomon Daypack</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Goodrich</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project14.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/kvar.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Ciao Socks</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Kvar by Design</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                 </div>
                                 <div className=" frame_slide_2 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
-                                        <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project7.webp" alt="" />
+                                        <div className="aspect-square h-[25vw] center w-full">
+                                            <img className='w-[80%] object-contain' src="/images/Projects/Voltas.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>White Gum 001</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Norda</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Voltas</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
+                                    </div>
+                                    <div className="w-full ">
+                                        <div className="aspect-square h-[25vw]  center w-full">
+                                            <img className='w-[90%] object-contain' src="/images/Projects/opera.png" alt="" />
+                                        </div>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Opera Chips</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
+                                    </div>
+                                    
+                                    <div className="w-full ">
+                                        <div className="aspect-square h-[25vw] w-full">
+                                            <img className='w-full h-full object-cover' src="/images/Projects/kvar.png" alt="" />
+                                        </div>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Kvar by Design</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project8.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/oneLess.jpg" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Ski Mask - Storm Blue</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>JJJJound x Descente</h2>
-                                    </div>
-                                    <div className="w-full ">
-                                        <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project9.webp" alt="" />
-                                        </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Zen Sherpa Jacket</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Captain's Zen Garden</h2>
-                                    </div>
-                                    <div className="w-full ">
-                                        <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project2.webp" alt="" />
-                                        </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Zen Sherpa Jacket</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Captain's Zen Garden</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>One Less</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Influencer Marketing</h2>
                                     </div>
                                 </div>
                                 <div className=" frame_slide_3 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
-                                        <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project10.webp" alt="" />
+                                        <div className="aspect-square h-[25vw] w-full center">
+                                            <img className='w-[80%] h-[80%] object-contain' src="/images/Projects/pepsi.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'> Shell Jacket</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>66°North</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'> Pepsi India</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project11.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/plotPoint.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Loose Tapered Ridge Pants</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Gramicci</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Plot Point</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project12.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/wealth_fusion.webp" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Early Winter Gloves</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Wealthfusion</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
-                                    <div className="w-full ">
+                                   <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project13.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/jadau.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Ciao Socks</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Jadau</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                 </div>
                                 <div className=" frame_slide_4 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project14.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/labelRituKumar.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Ciao Socks</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Fingerscrossed</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Label Ritu Kumar</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project15.webp" alt="" />
+                                        <div className="aspect-square h-[25vw] center w-full">
+                                            <img className='w-[90%] object-contain' src="/images/Projects/podarSchool.png" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Loose Tapered Ridge Pants</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>Gramicci</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Podar International School</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Influencer Marketing</h2>
                                     </div>
                                     <div className="w-full ">
-                                        <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project1.webp" alt="" />
+                                        <div className="aspect-square h-[25vw] center bg-black w-full">
+                                            <img className='w-[80%] object-contain' src="/images/Projects/freddieCity.jpg" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>Pas Normal Studios</h2>
-                                        <h2 className='capitalize text-sm vvds_light leading-none'>PNS x Salomon Daypack</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Freddie City</h2>
+                                        <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="/images/project/project7.webp" alt="" />
                                         </div>
-                                        <h2 className='capitalize text-xl vvds_light mt-2'>White Gum 001</h2>
+                                        <h2 className='capitalize text-xl vvds_light mt-2'>Voltas</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Norda</h2>
                                     </div>
                                 </div>
@@ -942,8 +945,8 @@ const FrameA = () => {
                         <div className=" footer  w-[100vw] text-white right-0 absolute bottom-[-15vh] z-[9] bg-[#19334B] px-6 h-[15vh] flex items-center justify-between">
                             <div className="">
 
-                                <h3 className='text-white  vvds_light' >I’m open to collaborations, commissions, or a good conversation.</h3>
-                                <h3 className='text-white  vvds_light' >Email me at pirantarapora@gmail.com</h3>
+                                <h3 className='text-white  vvds_light' >Open to collaborations, commissions, or simply a meaningful conversation. </h3>
+                                <h3 className='text-white  vvds_light' >Reach me at me@pirantee.com</h3>
                             </div>
                             <div className="flex items-center gap-5">
                                 <div className="cursor-pointer  size-10 group hover:scale-90 transition duration-300 rounded-full text-[#19334B] center bg-[#D9D9D9]">

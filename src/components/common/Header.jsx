@@ -22,9 +22,9 @@ const Header = () => {
   return (
     <div>
       <div className="absolute top-0 w-full z-[16] flex items-center justify-end p-5">
-        <div cla>
+        <div>
           <div className="  flex flex-col text-end items-end overflow-hidden">
-            <h2 className=' lin opacity-0 text-xl'>Contact</h2>
+            {/* <h2 className=' lin opacity-0 text-xl'>Contact</h2> */}
           </div>
           <div className="mt-5 capitalize flex flex-col text-end items-end">
             {["Instagram", "LinkedIn", "Behance"].map((label,i) => (
