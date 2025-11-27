@@ -4,10 +4,10 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { RiBehanceLine, RiInstagramLine, RiLinkedinLine } from '@remixicon/react';
 import { CustomEase } from 'gsap/dist/CustomEase';
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin';
-import ProjectCardImage from '../Effect/ProjectCardImage';
+import ProjectCardImage from './../Effect/ProjectCardImage';
 gsap.registerPlugin(ScrollTrigger, CustomEase, MotionPathPlugin);
 
-const FrameA = () => {
+const DesktopHome = () => {
     const main_Ref = useRef(null);
     const logoRef = useRef(null);
     const logoRef2 = useRef(null);
@@ -17,7 +17,10 @@ const FrameA = () => {
     const imageCache = useRef({});
     const totalFrames = 83;
 
+
     useEffect(() => {
+        if (window.innerWidth < 1020) return
+
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -530,6 +533,8 @@ const FrameA = () => {
     }, []);
 
     useEffect(() => {
+        if (window.innerWidth < 1020) return
+
         let percent = 0;
         const el = document.querySelector(".percent");
 
@@ -549,6 +554,8 @@ const FrameA = () => {
     }, []);
 
     useEffect(() => {
+        if (window.innerWidth < 1020) return
+
         gsap.to(".rotate", {
             rotation: 360,
             ease: "none",
@@ -563,8 +570,8 @@ const FrameA = () => {
         <div>
             <div className="logo_paren fixed block  w-56 z-[999] p-5">
                 <div
-                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                  className="logo cursor-pointer block overflow-hidden">
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    className="logo cursor-pointer block overflow-hidden">
                     <img className=' w-[4vw] logo_image opacity-0 ' src="/logos/MenuLogo.svg" alt="" />
                 </div>
             </div>
@@ -658,7 +665,7 @@ const FrameA = () => {
                 </div>
                 <div
                     className=" profile_pic absolute z-[8] bottom-[-100%] absolute_x_center w-[40%]  h-[80vh]">
-                    <img className='object-cover brightness-[.8] w-full h-full' src="/images/Piran_pic.webp" alt="" />
+                    <img className='object-cover brightness-[.8] w-full h-full' src="/images/piran_pic_new.webp" alt="" />
                 </div>
 
                 <div className=" slide_box z-[10] -translate-x-1/2 aspect-square w-[26vw] p-10 text-[1.2vw] absolute h-[30vw] bg-[#FFFBF3] bottom-0  left-[125%] flex flex-col justify-between items-center  text-center ">
@@ -795,7 +802,7 @@ const FrameA = () => {
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Opera Chips</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
-                                    
+
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="/images/Projects/kvar.png" alt="" />
@@ -833,7 +840,7 @@ const FrameA = () => {
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Wealthfusion</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
-                                   <div className="w-full ">
+                                    <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
                                             <img className='w-full h-full object-cover' src="/images/Projects/jadau.png" alt="" />
                                         </div>
@@ -865,7 +872,7 @@ const FrameA = () => {
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/project/project7.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/Voltas.png" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Voltas</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Norda</h2>
@@ -976,4 +983,4 @@ const FrameA = () => {
     );
 };
 
-export default FrameA;
+export default DesktopHome;

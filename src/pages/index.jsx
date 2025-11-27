@@ -1,12 +1,19 @@
-import Hero from "@/components/home/Hero";
+import DesktopHome from '@/components/Home/DesktopHome'
+import MobileHome from '@/components/Home/MobileHome'
+import React from 'react'
 
 const Home = () => {
-
   return (
     <>
-      <Hero />
-    </>
-  );
-};
+        <div className="hidden lg:block">
+            <DesktopHome/>
+        </div>
 
-export default Home;
+        <div className="lg:hidden">
+            <MobileHome/>
+        </div>
+    </>
+  )
+}
+
+export default Home

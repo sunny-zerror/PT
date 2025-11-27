@@ -8,12 +8,19 @@ const LenisScroll = ({ children }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       const lenis = new Lenis({
-        smooth: true,
         duration: 1.8,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        smoothTouch: true,
+        direction: "vertical",
+        gestureDirection: "vertical",
+        wheelMultiplier: 0.8,
+        touchMultiplier: 1.2,
+        infinite: false,
       });
 
-      lenisRef.current = lenis;
+      lenis.current = lenis;
+      window.lenis = lenis;
 
       // ✅ Restore scroll position if available
       const savedY = localStorage.getItem("scrollY");
