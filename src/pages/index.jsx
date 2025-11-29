@@ -1,19 +1,24 @@
-import DesktopHome from '@/components/Home/DesktopHome'
-import MobileHome from '@/components/Home/MobileHome'
-import React from 'react'
+import { useEffect, useState } from "react";
+import DesktopHome from "@/components/Home/DesktopHome";
+import MobileHome from "@/components/Home/mobile/MobileHome";
 
 const Home = () => {
-  return (
-    <>
-        <div className="hidden lg:block">
-            <DesktopHome/>
-        </div>
+  const [isDesktop, setIsDesktop] = useState(false);
 
-        <div className="lg:hidden">
-            <MobileHome/>
-        </div>
-    </>
-  )
-}
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1020px)");
 
-export default Home
+    setIsDesktop(mediaQuery.matches);
+
+    const handleChange = () => setIsDesktop(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  return isDesktop ? <DesktopHome /> : <MobileHome />;
+};
+
+export default Home;

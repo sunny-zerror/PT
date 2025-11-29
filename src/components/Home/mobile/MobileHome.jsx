@@ -1,6 +1,9 @@
 import { projectsData } from '@/data/ProjectsData';
 import gsap from 'gsap';
 import React, { useEffect } from 'react'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import MobileHero from './MobileHero';
+gsap.registerPlugin(ScrollTrigger)
 
 const MobileHome = () => {
 
@@ -67,36 +70,10 @@ const MobileHome = () => {
 
     return (
         <>
-            <div className="w-full h-[100svh]">
-                <div className="w-full h-[60%] flex flex-col gap-10 pb-2 items-center justify-end">
-                    <div className=" px-3 w-full text-end ">
-                        <p>Where clarity drives creativity</p>
-                        <p>Brand Systems Architect</p>
-                        <p>From insight to impact</p>
-                        <p>Mumbai, India.</p>
-                    </div>
-                    <img className="w-[94.8%]" src="/logos/Logo_Dark.svg" alt="" />
-                </div>
 
-                <div className=" overflow-hidden w-full h-[40%] center ">
-                    <img
-                        className="object-cover w-full h-full"
-                        src="https://images.prismic.io/archi-malin/Z2oIO5bqstJ98zX3_BLEUFINAL.jpg?auto=format%2Ccompress&rect=0%2C269%2C1128%2C731&w=2200&h=1425"
-                        alt=""
-                    />
-                </div>
-            </div>
+            <MobileHero/>
 
-            <div className="  w-full py-10 gap-y-10  p-3 text-4xl  bg-[#FFFBF3] flex flex-col justify-center items-center  text-center ">
-                <img src="	https://www.archi-malinstudio.com/_vercel/image?url=%2Fimg%2Fpicto%2Fflocon.svg&w=320&q=100" alt="" />
-                <div className=" center flex-col gap-3">
-                    <p className=' text-3xl mix_light leading-none'>
-                        Helping brands grow by making their story clear.</p>
-                    <p className=' text-3xl mix_light leading-none'>
-                        Together, we create stories that matter and strategies that work.</p>
-                </div>
-                <h2 className='text-sm uppercase'>The journey starts here.</h2>
-            </div>
+
 
             <div
                 className=" profile_pic aspect-[3/4] w-full">
@@ -138,14 +115,14 @@ const MobileHome = () => {
                 <div className="w-full  center flex-col gap-3 text-black bg-[#FFFBF3]">
                     <h2 className='uppercase  text-sm '>Projects</h2>
                     <h2 className='capitalize text-3xl vvds_light'>Built on Purpose</h2>
-                    <p className='capitalize leading-none opacity-90 text-center text-sm  '>A shared answer to how strategy, structure, and detail create meaningful outcomes.</p>
+                    <p className='capitalize w-[80%] leading-none opacity-90 text-center text-sm  '>A shared answer to how strategy, structure, and detail create meaningful outcomes.</p>
                 </div>
 
-                <div className="w-full grid gap-x-3 gap-y-5 grid-cols-2">
+                <div className="w-full grid gap-x-3 mt-5 gap-y-5 grid-cols-2 md:grid-cols-4">
                     {projectsData.map((data, i) => (
                         <div key={i} className="w-full">
-                            <div className="aspect-[3/4]  center border border-black/5 w-full">
-                                <img className='w-full object-contain ' src={data.image} alt="" />
+                            <div className="aspect-square overflow-hidden  center  w-full">
+                                <img className='object-cover w-full h-full ' src={data.image} alt="" />
                             </div>
                             <h2 className=' text-sm uppercase  mt-1 leading-none'>{data.title}</h2>
                             <h2 className=' text-sm vvds_light leading-none mt-1 capitalize'>{data.service}</h2>

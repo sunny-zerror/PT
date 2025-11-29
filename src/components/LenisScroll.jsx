@@ -6,6 +6,7 @@ const LenisScroll = ({ children }) => {
   const rafRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 1020) return
     const timeout = setTimeout(() => {
       const lenis = new Lenis({
         duration: 1.8,
@@ -53,7 +54,7 @@ const LenisScroll = ({ children }) => {
     };
   }, []);
 
-  return <div>{children}</div>;
+  return <>{children}</>;
 };
 
 export default LenisScroll;

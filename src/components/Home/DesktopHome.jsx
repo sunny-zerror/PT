@@ -615,7 +615,6 @@ const DesktopHome = () => {
 
                 <div
                     className="absolute w-full absolute_center  center z-[10] flex-col ">
-
                     <div className="loader_left pointer-events-none left-[25%]  text-xl absolute top-1/2 translate-y-[-50%]">
                         <p>Loading</p>
                     </div>
@@ -630,10 +629,6 @@ const DesktopHome = () => {
                             [<span className="percent inline-block text-center "> 00 </span>%]
                         </p>
                     </div>
-
-
-
-
                 </div>
 
                 <div
@@ -642,7 +637,7 @@ const DesktopHome = () => {
 
                     <img
                         className="object-cover w-full h-full"
-                        src="https://images.prismic.io/archi-malin/Z2oIO5bqstJ98zX3_BLEUFINAL.jpg?auto=format%2Ccompress&rect=0%2C269%2C1128%2C731&w=2200&h=1425"
+                        src="/images/Hero_bg.avif"
                         alt=""
                     />
                 </div>
@@ -715,21 +710,21 @@ const DesktopHome = () => {
                     <div className=" spn_img_slider px-5 w-[23%] text-black absolute right-0 top-0">
                         <div className="w-full">
                             <div className=" aspect-square h-[22vw] center bg-[#18293A] w-full">
-                                <img className='w-[40%]' src="/images/Projects/PointOf.png" alt="" />
+                                <img className='w-[40%]' src="/images/Projects/PointOf.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>Point Of </h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'>Founder</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="/images/Projects/casaCarigar.jpg" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/Projects/casaCarigar.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>Casa Carigar</h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'>Co-Founder</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-contain' src="/images/Projects/Poonwala.png" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/Projects/Poonwala.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>The Poonawala Group</h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'></h2>
@@ -758,7 +753,7 @@ const DesktopHome = () => {
 
                                     <div className="move_proj  z-[999] translate-x-[77vw] bg-[#fffbf3] translate-y-[-100vh]  w-[87.5%] ">
                                         <div className=" move_proj_inner  aspect-square h-[22vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/jbl.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/jbl.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>JBL</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Community Management</h2>
@@ -767,21 +762,21 @@ const DesktopHome = () => {
 
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/namah.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/namah.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>House Of Namah</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/goodrich.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/goodrich.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Goodrich</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/kvar.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/kvar.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Kvar by Design</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
@@ -790,14 +785,14 @@ const DesktopHome = () => {
                                 <div className=" frame_slide_2 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] center w-full">
-                                            <img className='w-[80%] object-contain' src="/images/Projects/Voltas.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/Voltas.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Voltas</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw]  center w-full">
-                                            <img className='w-[90%] object-contain' src="/images/Projects/opera.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/opera.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Opera Chips</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
@@ -805,14 +800,14 @@ const DesktopHome = () => {
 
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/kvar.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/kvar.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Kvar by Design</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/oneLess.jpg" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/oneLess.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>One Less</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Influencer Marketing</h2>
@@ -821,28 +816,28 @@ const DesktopHome = () => {
                                 <div className=" frame_slide_3 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full center">
-                                            <img className='w-[80%] h-[80%] object-contain' src="/images/Projects/pepsi.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/pepsi.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'> Pepsi India</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/plotPoint.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/plotPoint.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Plot Point</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/wealth_fusion.webp" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/wealthFusion.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Wealthfusion</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/jadau.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/jadau.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Jadau</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Branding</h2>
@@ -851,28 +846,28 @@ const DesktopHome = () => {
                                 <div className=" frame_slide_4 z-[-1]  w-full h-screen space-y-10 ">
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/labelRituKumar.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/labelRituKumar.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Label Ritu Kumar</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] center w-full">
-                                            <img className='w-[90%] object-contain' src="/images/Projects/podarSchool.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/podarSchool.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Podar International School</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Influencer Marketing</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] center bg-black w-full">
-                                            <img className='w-[80%] object-contain' src="/images/Projects/freddieCity.jpg" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/freddieCity.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Freddie City</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Social Media</h2>
                                     </div>
                                     <div className="w-full ">
                                         <div className="aspect-square h-[25vw] w-full">
-                                            <img className='w-full h-full object-cover' src="/images/Projects/Voltas.png" alt="" />
+                                            <img className='w-full h-full object-cover' src="/images/Projects/Voltas.webp" alt="" />
                                         </div>
                                         <h2 className='capitalize text-xl vvds_light mt-2'>Voltas</h2>
                                         <h2 className='capitalize text-sm vvds_light leading-none'>Norda</h2>
@@ -895,58 +890,58 @@ const DesktopHome = () => {
                     className=" img_frame_slide_parent absolute_center absolute opacity-0 bg-black  z-[999]  w-[20.5vw] h-[88vh] overflow-hidden pointer-events-none ">
                     <div className=" img_frame_slide_child opacity-0 w-[300vw] h-full bg-[#19334B] relative">
                         {/* royalmile */}
-                        <img className=' royal_mile w-[30vw] z-[99]  absolute top-0 left-[30%]' src="/images/Slider Frame/royalMile.png" alt="" />
+                        <img className=' royal_mile w-[30vw] z-[99]  absolute top-0 left-[30%]' src="/images/Slider Frame/royalMile.webp" alt="" />
 
                         {/* bgimg1 */}
-                        <img className=' opacity-70 w-[100vw] h-full  absolute top-0 left-0' src="/images/Slider Frame/bgimg1.png" alt="" />
+                        <img className=' opacity-70 w-[100vw] h-full  absolute top-0 left-0' src="/images/Slider Frame/bgimg1.webp" alt="" />
 
                         {/* bgimg2 */}
-                        <img className=' w-[100vw] h-full   absolute top-0 left-[32%]' src="/images/Slider Frame/bgimg2.png" alt="" />
+                        <img className=' w-[100vw] h-full   absolute top-0 left-[32%]' src="/images/Slider Frame/bgimg2.webp" alt="" />
 
                         {/* bgimg3  */}
-                        <img className=' bgimg3 w-[100vw]  z-[10]  absolute bottom-0 left-[66.5%] mix-blend-darken' src="/images/Slider Frame/bgimg3.png" alt="" />
+                        <img className=' bgimg3 w-[100vw]  z-[10]  absolute bottom-0 left-[66.5%] mix-blend-darken' src="/images/Slider Frame/bgimg3.webp" alt="" />
 
                         {/* sticker 2 */}
-                        <img className=' sticker2 w-[16vw] z-[22] absolute top-[30%] left-[53%]' src="/images/Slider Frame/sticker2.png" alt="" />
+                        <img className=' sticker2 w-[16vw] z-[22] absolute top-[30%] left-[53%]' src="/images/Slider Frame/sticker2.webp" alt="" />
 
                         {/* church  */}
-                        <img className=' church h-full z-[20]  absolute top-0 left-[50%]' src="/images/Slider Frame/church.png" alt="" />
+                        <img className=' church h-full z-[20]  absolute top-0 left-[50%]' src="/images/Slider Frame/church.webp" alt="" />
 
                         {/* ellipse  */}
-                        <img className=' ellipse w-[30vw] opacity-30  absolute  top-[10%]  left-[12%]' src="/images/Slider Frame/Ellipse.png" alt="" />
+                        <img className=' ellipse w-[30vw] opacity-30  absolute  top-[10%]  left-[12%]' src="/images/Slider Frame/Ellipse.webp" alt="" />
 
                         {/* spiral  */}
-                        <img className=' w-[100vw]  absolute  top-[50%]  translate-y-[-50%] left-[.5%]' src="/images/Slider Frame/spiral.png" alt="" />
+                        <img className=' w-[100vw]  absolute  top-[50%]  translate-y-[-50%] left-[.5%]' src="/images/Slider Frame/spiral.webp" alt="" />
 
                         {/* india gate */}
-                        <img className=' india_gate w-[25vw] z-[9]  absolute -bottom-4 left-0' src="/images/Slider Frame/IndiaGate.png" alt="" />
+                        <img className=' india_gate w-[25vw] z-[9]  absolute -bottom-4 left-0' src="/images/Slider Frame/IndiaGate.webp" alt="" />
 
                         {/* statue  */}
-                        <img className=' w-[30vw]  absolute  top-[50%]  translate-y-[-50%] left-[12.5%]' src="/images/Slider Frame/statue.png" alt="" />
+                        <img className=' w-[30vw]  absolute  top-[50%]  translate-y-[-50%] left-[12.5%]' src="/images/Slider Frame/statue.webp" alt="" />
 
                         {/* car  */}
-                        <img className=' car w-[40vw]  absolute z-[4]  bottom-[10%] left-[25%]' src="/images/Slider Frame/car.png" alt="" />
+                        <img className=' car w-[40vw]  absolute z-[4]  bottom-[10%] left-[25%]' src="/images/Slider Frame/car.webp" alt="" />
 
                         {/* pepsi  */}
-                        <img className=' pepsi w-[15vw]  absolute z-[2] bottom-[34%] left-[25%]' src="/images/Slider Frame/pepsi.png" alt="" />
+                        <img className=' pepsi w-[15vw]  absolute z-[2] bottom-[34%] left-[25%]' src="/images/Slider Frame/pepsi.webp" alt="" />
 
                         {/* sticker  */}
-                        <img className=' sticker w-[7vw]  z-[9] absolute  bottom-[20%] left-[13%]' src="/images/Slider Frame/sticker.png" alt="" />
+                        <img className=' sticker w-[7vw]  z-[9] absolute  bottom-[20%] left-[13%]' src="/images/Slider Frame/sticker.webp" alt="" />
 
                         {/* birds  */}
-                        <img className=' birds w-[70vw] z-[99]  absolute mix-blend-darken  top-[-5%] left-[-5%] opacity-40' src="/images/Slider Frame/Birds.png" alt="" />
+                        <img className=' birds w-[70vw] z-[99]  absolute mix-blend-darken  top-[-5%] left-[-5%] opacity-40' src="/images/Slider Frame/Birds.webp" alt="" />
 
                         {/* bridge  */}
-                        <img className=' bridge w-[250vw]  z-[6] absolute mix-blend-darken  bottom-[-10%] left-0 ' src="/images/Slider Frame/Bridge.png" alt="" />
+                        <img className=' bridge w-[250vw]  z-[6] absolute mix-blend-darken  bottom-[-10%] left-0 ' src="/images/Slider Frame/Bridge.webp" alt="" />
 
                         {/* 2025  */}
-                        <img className=' w-[5vw] absolute  top-5 right-5 ' src="/images/Slider Frame/2025.png" alt="" />
+                        <img className=' w-[5vw] absolute  top-5 right-5 ' src="/images/Slider Frame/2025.webp" alt="" />
 
                         {/* piran pic  */}
-                        <img className=' piran_picc w-[32vw] z-[16] absolute mix-blend-plus-lighter  bottom-0 right-16 ' src="/images/Slider Frame/Piran.png" alt="" />
+                        <img className=' piran_picc w-[32vw] z-[16] absolute mix-blend-plus-lighter  bottom-0 right-16 ' src="/images/Slider Frame/Piran.webp" alt="" />
 
                         {/* piran txt  */}
-                        <img className=' piran_txt w-[90vw] z-[16] absolute mix-blend-overlay  bottom-10 right-[4rem] ' src="/images/Slider Frame/PiranText.png" alt="" />
+                        <img className=' piran_txt w-[90vw] z-[16] absolute mix-blend-overlay  bottom-10 right-[4rem] ' src="/images/Slider Frame/PiranText.webp" alt="" />
 
                         {/* footer  */}
                         <div className=" footer  w-[100vw] text-white right-0 absolute bottom-[-15vh] z-[9] bg-[#19334B] px-6 h-[15vh] flex items-center justify-between">
