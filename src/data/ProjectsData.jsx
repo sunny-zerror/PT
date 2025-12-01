@@ -1,5 +1,10 @@
 export const projectsData = [
   {
+    title: "Point Of ",
+    service: "Founder",
+    image: "/images/Projects/PointOf.webp",
+  },
+  {
     title: "JBL",
     service: "Community Management",
     image: "/images/Projects/jbl.webp",
@@ -10,34 +15,14 @@ export const projectsData = [
     image: "/images/Projects/namah.webp",
   },
   {
-    title: "Goodrich",
-    service: "Branding",
-    image: "/images/Projects/goodrich.webp",
-  },
-  {
     title: "Kvar by Design",
     service: "Branding",
     image: "/images/Projects/kvar.webp",
   },
   {
-    title: "One Less",
-    service: "Influencer Marketing",
-    image: "/images/Projects/oneLess.webp",
-  },
-  {
-    title: "Pepsi India",
-    service: "Social Media",
-    image: "/images/Projects/pepsi.webp",
-  },
-  {
     title: "Plot Point",
     service: "Branding",
     image: "/images/Projects/plotPoint.webp",
-  },
-  {
-    title: "Voltas",
-    service: "Social Media",
-    image: "/images/Projects/Voltas.webp",
   },
   {
     title: "Wealthfusion",
@@ -50,19 +35,9 @@ export const projectsData = [
     image: "/images/Projects/jadau.webp",
   },
   {
-    title: "Opera Chips",
-    service: "Branding",
-    image: "/images/Projects/opera.webp",
-  },
-  {
     title: "Label Ritu Kumar",
     service: "Social Media",
     image: "/images/Projects/labelRituKumar.webp",
-  },
-  {
-    title: "Podar International School",
-    service: "Influencer Marketing",
-    image: "/images/Projects/podarSchool.webp",
   },
   {
     title: "Freddie City",
@@ -70,9 +45,34 @@ export const projectsData = [
     image: "/images/Projects/freddieCity.webp",
   },
   {
+    title: "Podar International School",
+    service: "Influencer Marketing",
+    image: "/images/Projects/podarSchool.webp",
+  },
+  {
+    title: "Goodrich",
+    service: "Branding",
+    image: "/images/Projects/goodrich.webp",
+  },
+  {
+    title: "One Less",
+    service: "Influencer Marketing",
+    image: "/images/Projects/oneLess.webp",
+  },
+  {
+    title: "Pepsi India",
+    service: "Social Media",
+    image: "/images/Projects/pepsi.webp",
+  },
+  {
     title: "Voltas",
-    service: "Norda",
+    service: "Social Media",
     image: "/images/Projects/Voltas.webp",
+  },
+  {
+    title: "Opera Chips",
+    service: "Branding",
+    image: "/images/Projects/opera.webp",
   },
   {
     title: "Poonawala Towers ",

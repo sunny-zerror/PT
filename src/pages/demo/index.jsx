@@ -1,56 +1,19 @@
-import gsap from "gsap";
-import React, { useRef } from "react";
+import React from 'react'
 
-const Index = () => {
-  const parRef = useRef(null);
-  const innerRef = useRef(null);
-
-  const animate = () => {
-    const scrollY = window.scrollY || 0;
-
-    var tl = gsap.timeline();
-
-    tl.set(innerRef.current, {
-      position: "fixed",
-      css: { "--scroll-top": `-${scrollY}px` },
-    });
-    
-    tl.to(parRef.current, {
-      height: "100vh",
-      position: "fixed",
-      overflow: "hidden",
-      duration: 1,
-    });
-
-    tl.to(parRef.current, {
-      scale: 0.6,
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      duration: 1,
-    });
-  };
-
+const index = () => {
+  
   return (
-    <div onClick={animate}>
-      <div ref={parRef} className="w-full">
-        <div ref={innerRef} className="w-full scroll-container">
-          <div className="w-full text-8xl h-screen bg-blue-100 center">
-            <p>Center</p>
-          </div>
-          <div className="w-full text-8xl h-screen bg-red-100 center">
-            <p>Center</p>
-          </div>
-          <div className="w-full text-8xl h-screen bg-yellow-100 center">
-            <p>Center</p>
-          </div>
-          <div className="w-full text-8xl h-screen bg-green-100 center">
-            <p>Center</p>
-          </div>
-        </div>
+    <div>
+      <div className="w-full bg-red-500 lg:hidden ">
+        <p>hello</p>
+        <p>hello</p>
+      </div>
+      <div className="w-full bg-yellow-700 hidden lg:block ">
+        <p>hello</p>
+        <p>hello</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default index

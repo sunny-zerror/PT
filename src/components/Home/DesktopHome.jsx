@@ -710,21 +710,21 @@ const DesktopHome = () => {
                     <div className=" spn_img_slider px-5 w-[23%] text-black absolute right-0 top-0">
                         <div className="w-full">
                             <div className=" aspect-square h-[22vw] center bg-[#18293A] w-full">
-                                <img className='w-[40%]' src="/images/Projects/PointOf.webp" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/Projects/PointOf.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>Point Of </h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'>Founder</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="/images/Projects/casaCarigar.webp" alt="" />
+                                <img className='w-full h-full object-cover' src="/images/Projects/namah.webp" alt="" />
                             </div>
-                            <h2 className='capitalize text-xl vvds_light mt-2'>Casa Carigar</h2>
-                            <h2 className=' text-sm vvds_light leading-none uppercase'>Co-Founder</h2>
+                            <h2 className='capitalize text-xl vvds_light mt-2'>House Of Namah</h2>
+                            <h2 className=' text-sm vvds_light leading-none uppercase'>Branding</h2>
                         </div>
                         <div className="w-full mt-10">
                             <div className="h-[22vw] w-full">
-                                <img className='w-full h-full object-cover' src="/images/Projects/Poonwala.webp" alt="" />
+                                <img className='w-full h-full object-contain' src="/images/Projects/Poonwala.webp" alt="" />
                             </div>
                             <h2 className='capitalize text-xl vvds_light mt-2'>The Poonawala Group</h2>
                             <h2 className=' text-sm vvds_light leading-none uppercase'></h2>
@@ -890,58 +890,58 @@ const DesktopHome = () => {
                     className=" img_frame_slide_parent absolute_center absolute opacity-0 bg-black  z-[999]  w-[20.5vw] h-[88vh] overflow-hidden pointer-events-none ">
                     <div className=" img_frame_slide_child opacity-0 w-[300vw] h-full bg-[#19334B] relative">
                         {/* royalmile */}
-                        <img className=' royal_mile w-[30vw] z-[99]  absolute top-0 left-[30%]' src="/images/Slider Frame/royalMile.webp" alt="" />
+                        <img className=' royal_mile w-[30vw] z-[99]  absolute top-0 left-[30%]' src="/images/Slider Frame/royalMile.png" alt="" />
 
                         {/* bgimg1 */}
-                        <img className=' opacity-70 w-[100vw] h-full  absolute top-0 left-0' src="/images/Slider Frame/bgimg1.webp" alt="" />
+                        <img className=' opacity-70 w-[100vw] h-full  absolute top-0 left-0' src="/images/Slider Frame/bgimg1.png" alt="" />
 
                         {/* bgimg2 */}
-                        <img className=' w-[100vw] h-full   absolute top-0 left-[32%]' src="/images/Slider Frame/bgimg2.webp" alt="" />
+                        <img className=' w-[100vw] h-full   absolute top-0 left-[32%]' src="/images/Slider Frame/bgimg2.png" alt="" />
 
                         {/* bgimg3  */}
-                        <img className=' bgimg3 w-[100vw]  z-[10]  absolute bottom-0 left-[66.5%] mix-blend-darken' src="/images/Slider Frame/bgimg3.webp" alt="" />
+                        <img className=' bgimg3 w-[100vw]  z-[10]  absolute bottom-0 left-[66.5%] mix-blend-darken' src="/images/Slider Frame/bgimg3.png" alt="" />
 
                         {/* sticker 2 */}
-                        <img className=' sticker2 w-[16vw] z-[22] absolute top-[30%] left-[53%]' src="/images/Slider Frame/sticker2.webp" alt="" />
+                        <img className=' sticker2 w-[16vw] z-[22] absolute top-[30%] left-[53%]' src="/images/Slider Frame/sticker2.png" alt="" />
 
                         {/* church  */}
-                        <img className=' church h-full z-[20]  absolute top-0 left-[50%]' src="/images/Slider Frame/church.webp" alt="" />
+                        <img className=' church h-full z-[20]  absolute top-0 left-[50%]' src="/images/Slider Frame/church.png" alt="" />
 
                         {/* ellipse  */}
-                        <img className=' ellipse w-[30vw] opacity-30  absolute  top-[10%]  left-[12%]' src="/images/Slider Frame/Ellipse.webp" alt="" />
+                        <img className=' ellipse w-[30vw] opacity-30  absolute  top-[10%]  left-[12%]' src="/images/Slider Frame/Ellipse.png" alt="" />
 
                         {/* spiral  */}
-                        <img className=' w-[100vw]  absolute  top-[50%]  translate-y-[-50%] left-[.5%]' src="/images/Slider Frame/spiral.webp" alt="" />
+                        <img className=' w-[100vw]  absolute  top-[50%]  translate-y-[-50%] left-[.5%]' src="/images/Slider Frame/spiral.png" alt="" />
 
                         {/* india gate */}
-                        <img className=' india_gate w-[25vw] z-[9]  absolute -bottom-4 left-0' src="/images/Slider Frame/IndiaGate.webp" alt="" />
+                        <img className=' india_gate w-[25vw] z-[9]  absolute -bottom-4 left-0' src="/images/Slider Frame/IndiaGate.png" alt="" />
 
                         {/* statue  */}
-                        <img className=' w-[30vw]  absolute  top-[50%]  translate-y-[-50%] left-[12.5%]' src="/images/Slider Frame/statue.webp" alt="" />
+                        <img className=' w-[30vw]  absolute  top-[50%]  translate-y-[-50%] left-[12.5%]' src="/images/Slider Frame/statue.png" alt="" />
 
                         {/* car  */}
-                        <img className=' car w-[40vw]  absolute z-[4]  bottom-[10%] left-[25%]' src="/images/Slider Frame/car.webp" alt="" />
+                        <img className=' car w-[40vw]  absolute z-[4]  bottom-[10%] left-[25%]' src="/images/Slider Frame/car.png" alt="" />
 
                         {/* pepsi  */}
-                        <img className=' pepsi w-[15vw]  absolute z-[2] bottom-[34%] left-[25%]' src="/images/Slider Frame/pepsi.webp" alt="" />
+                        <img className=' pepsi w-[15vw]  absolute z-[2] bottom-[34%] left-[25%]' src="/images/Slider Frame/pepsi.png" alt="" />
 
                         {/* sticker  */}
-                        <img className=' sticker w-[7vw]  z-[9] absolute  bottom-[20%] left-[13%]' src="/images/Slider Frame/sticker.webp" alt="" />
+                        <img className=' sticker w-[7vw]  z-[9] absolute  bottom-[20%] left-[13%]' src="/images/Slider Frame/sticker.png" alt="" />
 
                         {/* birds  */}
-                        <img className=' birds w-[70vw] z-[99]  absolute mix-blend-darken  top-[-5%] left-[-5%] opacity-40' src="/images/Slider Frame/Birds.webp" alt="" />
+                        <img className=' birds w-[70vw] z-[99]  absolute mix-blend-darken  top-[-5%] left-[-5%] opacity-40' src="/images/Slider Frame/Birds.png" alt="" />
 
                         {/* bridge  */}
-                        <img className=' bridge w-[250vw]  z-[6] absolute mix-blend-darken  bottom-[-10%] left-0 ' src="/images/Slider Frame/Bridge.webp" alt="" />
+                        <img className=' bridge w-[250vw]  z-[6] absolute mix-blend-darken  bottom-[-10%] left-0 ' src="/images/Slider Frame/Bridge.png" alt="" />
 
                         {/* 2025  */}
-                        <img className=' w-[5vw] absolute  top-5 right-5 ' src="/images/Slider Frame/2025.webp" alt="" />
+                        <img className=' w-[5vw] absolute  top-5 right-5 ' src="/images/Slider Frame/2025.png" alt="" />
 
                         {/* piran pic  */}
-                        <img className=' piran_picc w-[32vw] z-[16] absolute mix-blend-plus-lighter  bottom-0 right-16 ' src="/images/Slider Frame/Piran.webp" alt="" />
+                        <img className=' piran_picc w-[32vw] z-[16] absolute mix-blend-plus-lighter  bottom-0 right-16 ' src="/images/Slider Frame/Piran.png" alt="" />
 
                         {/* piran txt  */}
-                        <img className=' piran_txt w-[90vw] z-[16] absolute mix-blend-overlay  bottom-10 right-[4rem] ' src="/images/Slider Frame/PiranText.webp" alt="" />
+                        <img className=' piran_txt w-[90vw] z-[16] absolute mix-blend-overlay  bottom-10 right-[4rem] ' src="/images/Slider Frame/PiranText.png" alt="" />
 
                         {/* footer  */}
                         <div className=" footer  w-[100vw] text-white right-0 absolute bottom-[-15vh] z-[9] bg-[#19334B] px-6 h-[15vh] flex items-center justify-between">
