@@ -67,3 +67,18 @@ body::-webkit-scrollbar {
 .scroll-container {
   transform: translateY(var(--scroll-top, 0));
 }
+
+.desktp_wrk_pren {
+  position: relative;
+  perspective: 1000px;
+}
+
+.cards-stage {
+  transform-style: preserve-3d;
+}
+
+.scroll-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}

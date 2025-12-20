@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { RiBehanceLine, RiInstagramLine, RiLinkedinLine } from '@remixicon/react';
 import { CustomEase } from 'gsap/dist/CustomEase';
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin';
-import ProjectCardImage from './../Effect/ProjectCardImage';
+import ProjectCardImage from '../Effect/ProjectCardImage';
 gsap.registerPlugin(ScrollTrigger, CustomEase, MotionPathPlugin);
 
 const DesktopHome = () => {
@@ -15,7 +15,7 @@ const DesktopHome = () => {
     const canvasRef = useRef(null);
     const frameRef = useRef(0);
     const imageCache = useRef({});
-    const totalFrames = 83;
+    const totalFrames = 114;
 
 
     useEffect(() => {
@@ -30,7 +30,7 @@ const DesktopHome = () => {
         let loaded = 0;
         for (let i = 1; i < totalFrames; i++) {
             const padded = String(i).padStart(4, '0');
-            const src = `/frames/${padded}.jpg`;
+            const src = `/frames/${padded}.png`;
             const img = new Image();
             img.src = src;
             img.onload = () => {
