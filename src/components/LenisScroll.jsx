@@ -7,7 +7,6 @@ const LenisScroll = ({ children }) => {
 
   useEffect(() => {
     if (window.innerWidth < 1020) return
-    const timeout = setTimeout(() => {
       const lenis = new Lenis({
         duration: 1.8,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -41,7 +40,6 @@ const LenisScroll = ({ children }) => {
       };
 
       rafRef.current = requestAnimationFrame(raf);
-    }, 7000); // Delay init
 
     return () => {
       clearTimeout(timeout);

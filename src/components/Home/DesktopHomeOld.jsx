@@ -7,7 +7,7 @@ import MotionPathPlugin from 'gsap/dist/MotionPathPlugin';
 import ProjectCardImage from '../Effect/ProjectCardImage';
 gsap.registerPlugin(ScrollTrigger, CustomEase, MotionPathPlugin);
 
-const DesktopHome = () => {
+const DesktopHomeOld = () => {
     const main_Ref = useRef(null);
     const logoRef = useRef(null);
     const logoRef2 = useRef(null);
@@ -978,4 +978,4 @@ const DesktopHome = () => {
     );
 };
 
-export default DesktopHome;
+export default DesktopHomeOld;

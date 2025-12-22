@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MobileHome from "@/components/Home/mobile/MobileHome";
-import DesktopHome from "@/components/Home/DesktopHome";
+import DesktopHome from "@/components/Home/desktop/DesktopHome";
 
 const Home = () => {
   const [isDesktop, setIsDesktop] = useState(false);

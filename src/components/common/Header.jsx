@@ -16,7 +16,7 @@ const Header = () => {
         duration: 0.5,
         ease: "power2.out",
       })
-    }else{
+    } else {
       gsap.set(".lin , .mob_logo_image", { y: -10, opacity: 0 })
       gsap.to(".lin , .mob_logo_image", {
         y: 0,
@@ -33,6 +33,13 @@ const Header = () => {
 
   return (
     <nav>
+      <div className="logo_paren fixed block  w-56 z-[999] p-5">
+        <div
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="logo cursor-pointer block overflow-hidden">
+          <img className=' w-[4vw] logo_image opacity-0 ' src="/logos/MenuLogo.svg" alt="" />
+        </div>
+      </div>
       <div className=" lg:hidden logo_paren fixed block p-3 z-[999] ">
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
