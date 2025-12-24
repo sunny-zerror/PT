@@ -1,12 +1,12 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-import React from 'react'
+import React, { useEffect } from 'react'
 gsap.registerPlugin(ScrollTrigger)
 
 const AboutWork = () => {
 
-    useGSAP(() => {
+    useEffect(() => {
         var tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".about_work_paren",
@@ -73,7 +73,7 @@ const AboutWork = () => {
             // 5
             .to(".spn_5", { opacity: 1, duration: fadeIn });
 
-    })
+    },[])
 
     return (
         <>

@@ -98,7 +98,7 @@ const Hero = () => {
 
   }, [])
 
-  useGSAP(() => {
+  useEffect(() => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -175,7 +175,7 @@ const Hero = () => {
       duration: 3,
     }, "pin3");
 
-  })
+  },[])
 
   useEffect(() => {
     if (window.innerWidth < 1020) return

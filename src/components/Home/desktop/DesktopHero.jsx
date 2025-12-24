@@ -12,7 +12,7 @@ const DesktopHero = () => {
   const logoRef2 = useRef(null);
   const clipRef = useRef(null);
 
-  useGSAP(() => {
+  useEffect(() => {
     gsap.set(".animate_logo_div", {
       y: 40,
       scale: 0.3
@@ -85,9 +85,9 @@ const DesktopHero = () => {
       delay: 5.5
     })
 
-  })
+  },[])
 
-  useGSAP(() => {
+  useEffect(() => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -167,7 +167,7 @@ const DesktopHero = () => {
       duration: 3,
     }, "pin3");
 
-  })
+  },[])
 
   useEffect(() => {
     if (window.innerWidth < 1020) return

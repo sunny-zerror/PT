@@ -26,8 +26,7 @@ const ProjectsScroll = () => {
     const imageCache = useRef({});
     const totalFrames = 114;
     
-    useGSAP(
-        () => {
+    useEffect(() => {
             const canvas = canvasRef.current;
             const ctx = canvas.getContext('2d');
             canvas.width = window.innerWidth;
@@ -118,7 +117,7 @@ const ProjectsScroll = () => {
 
 
         },
-        { scope: containerRef }
+        { scope: containerRef },[]
     );
 
     return (
