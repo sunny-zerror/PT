@@ -33,19 +33,11 @@ const Header = () => {
 
   return (
     <nav>
-<<<<<<< HEAD
       <div className=" fixed  block  w-56 z-[999] p-5">
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className=" cursor-pointer block overflow-hidden">
           <img className=' w-[4vw] mob_logo_image  ' src="/logos/MenuLogo.svg" alt="" />
-=======
-      <div className="logo_paren fixed block  w-56 z-[999] p-5">
-        <div
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="logo cursor-pointer block overflow-hidden">
-          <img className=' w-[4vw] logo_image opacity-0 ' src="/logos/MenuLogo.svg" alt="" />
->>>>>>> 5bfab591eddde55e817e22b0d9723a204d45a199
         </div>
       </div>
       <div className=" lg:hidden logo_paren fixed block p-3 z-[999] ">
