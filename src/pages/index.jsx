@@ -1,24 +1,18 @@
-import { useEffect, useState } from "react";
-import MobileHome from "@/components/Home/mobile/MobileHome";
-import DesktopHome from "@/components/Home/DesktopHome";
+import AboutWork from '@/components/home/AboutWork'
+import Gallery from '@/components/home/Gallery'
+import Hero from '@/components/home/Hero'
+import ProjectsScroll from '@/components/home/ProjectsScroll'
+import React from 'react'
 
 const Home = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
+  return (
+    <>
+      <Hero/>
+      <AboutWork/>
+      <ProjectsScroll/>
+      <Gallery/>
+    </>
+  )
+}
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1020px)");
-
-    setIsDesktop(mediaQuery.matches);
-
-    const handleChange = () => setIsDesktop(mediaQuery.matches);
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
-  }, []);
-
-  return isDesktop ? <DesktopHome /> : <MobileHome />;
-};
-
-export default Home;
+export default Home

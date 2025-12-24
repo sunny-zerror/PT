@@ -1,55 +1,17 @@
-@font-face {
-  font-family: mixta-ess-sharpit-light;
-  src: url(../../public/fonts/mixta-ess-sharpit-light-webfont.DHOzVYr-.woff2);
-}
-@font-face {
-  font-family: mixta-ess-sharpit-regular;
-  src: url(../../public/fonts/mixta-ess-sharpit-regular-webfont.DBmJbHe1.woff2);
-}
-@font-face {
-  font-family: vvds-fifties-exp-light;
-  src: url(../../public/fonts/vvds-fifties-exp-light-webfont.COIh7yOV.woff2);
-}
-@font-face {
-  font-family: vvds-fifties-exp-med;
-  src: url(../../public/fonts/vvds-fifties-exp-med-webfont.D6-YSotC.woff2);
-}
-@font-face {
-  font-family: vvds-fifties-exp-reg;
-  src: url(../../public/fonts/vvds-fifties-exp-reg-webfont.B0OLSwyI.woff2);
-}
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+* {
+  --primary-color: #18293A;
+  scroll-behavior: smooth;
+  user-select: none;
+}
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #fffbf3;
 }
-.mix_light {
-  font-family: mixta-ess-sharpit-light;
-}
-.mix_reg {
-  font-family: mixta-ess-sharpit-regular;
-}
-.vvds_light {
-  font-family: vvds-fifties-exp-light;
-}
-.vvds_med {
-  font-family: vvds-fifties-exp-med;
-}
-.vvds_reg {
-  font-family: vvds-fifties-exp-reg;
-}
-p {
-  cursor: default;
-  font-family: mixta-ess-sharpit-regular;
-}
-h2 , .fot {
-  cursor: default;
-  font-family: vvds-fifties-exp-reg;
+.background {
+  background-color: #fffbf3;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -57,12 +19,22 @@ body::-webkit-scrollbar {
 .scrollbar_hide::-webkit-scrollbar {
   display: none;
 }
+.center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
+.absolute_center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-
-
-
-
+.absolute_x_center {
+  left: 50%;
+  transform: translate(-50%);
+}
 
 .scroll-container {
   transform: translateY(var(--scroll-top, 0));
@@ -81,4 +53,46 @@ body::-webkit-scrollbar {
   transform-style: preserve-3d;
   backface-visibility: hidden;
   will-change: transform, opacity;
+}
+
+.gallery_container {
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  /* background: #69bed9; */
+}
+
+.gallery_scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+}
+
+.gallery_item {
+  position: absolute;
+  width: 15vw;
+  pointer-events: auto;
+  filter: brightness(1);
+}
+
+.gallery_item.dimmed {
+  filter: brightness(0.2);
+}
+
+.grid_inne {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.gallery_container {
+  pointer-events: none;
 }

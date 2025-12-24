@@ -16,7 +16,7 @@ const Header = () => {
         duration: 0.5,
         ease: "power2.out",
       })
-    }else{
+    } else {
       gsap.set(".lin , .mob_logo_image", { y: -10, opacity: 0 })
       gsap.to(".lin , .mob_logo_image", {
         y: 0,
@@ -33,6 +33,13 @@ const Header = () => {
 
   return (
     <nav>
+      <div className=" fixed  block  w-56 z-[999] p-5">
+        <div
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className=" cursor-pointer block overflow-hidden">
+          <img className=' w-[4vw] mob_logo_image  ' src="/logos/MenuLogo.svg" alt="" />
+        </div>
+      </div>
       <div className=" lg:hidden logo_paren fixed block p-3 z-[999] ">
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -46,9 +53,9 @@ const Header = () => {
             <div key={i} className=" w-fit overflow-hidden group flex gap-1 items-center justify-end cursor-pointer relative transition duration-300">
               <h2
                 key={label}
-                className='cursor-pointer lin opacity-0  '
+                className='cursor-pointer text-[#18293A] lin opacity-0  '
               >
-                <span className=' group-hover:w-[100%] w-0 cursor-pointer transition-all duration-300 absolute h-[2px] bg-black/80 bottom-0' ></span>
+                <span className=' group-hover:w-[100%] w-0 cursor-pointer transition-all rounded-full duration-300 absolute h-[2px] bg-[text-[#18293A]] bottom-0' ></span>
                 {label}
               </h2>
               <img className='w-3 lin opacity-0  ' src="https://www.archi-malinstudio.com/img/arrow.svg" alt="" />
