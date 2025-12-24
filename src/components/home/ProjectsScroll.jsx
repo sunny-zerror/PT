@@ -148,7 +148,7 @@ const ProjectsScroll = () => {
     return (
         <div
             ref={containerRef}
-            className="desktp_wrk_pren relative w-full h-screen text-center center"
+            className="desktp_wrk_pren overflow-hidden relative w-full h-screen text-center center"
         >
             <div className=" last_vec absolute z-40 top-0 left-0 opacity-0  pointer-events-none flex  items-center w-full justify-center h-screen">
                 <canvas
