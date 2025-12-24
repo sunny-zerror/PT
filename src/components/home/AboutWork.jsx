@@ -1,4 +1,4 @@
-import { useGSAP } from '@gsap/react'
+
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import React, { useEffect } from 'react'
@@ -17,11 +17,11 @@ const AboutWork = () => {
         })
         tl.from(".spn_other_above", {
             top: "50%",
-            ease:"linear",
+            ease: "linear",
         })
         tl.from(".spn_other_below", {
             bottom: "50%",
-            ease:"linear",
+            ease: "linear",
         }, "<")
 
         const paralex_tl = gsap.timeline({
@@ -33,7 +33,7 @@ const AboutWork = () => {
         })
         paralex_tl.to(".split_txt_about", {
             y: 350,
-            ease:"linear",
+            ease: "linear",
             opacity: 0.2,
         })
 
@@ -73,7 +73,7 @@ const AboutWork = () => {
             // 5
             .to(".spn_5", { opacity: 1, duration: fadeIn });
 
-    },[])
+    }, [])
 
     return (
         <>

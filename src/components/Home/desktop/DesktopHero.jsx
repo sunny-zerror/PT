@@ -1,5 +1,5 @@
 import ProjectCardImage from '@/components/Effect/ProjectCardImage';
-import { useGSAP } from '@gsap/react';
+;
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -85,7 +85,7 @@ const DesktopHero = () => {
       delay: 5.5
     })
 
-  },[])
+  }, [])
 
   useEffect(() => {
 
@@ -167,7 +167,7 @@ const DesktopHero = () => {
       duration: 3,
     }, "pin3");
 
-  },[])
+  }, [])
 
   useEffect(() => {
     if (window.innerWidth < 1020) return

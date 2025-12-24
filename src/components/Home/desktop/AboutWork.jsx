@@ -1,4 +1,4 @@
-import { useGSAP } from '@gsap/react'
+
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import React, { useEffect } from 'react'
@@ -86,7 +86,7 @@ const AboutWork = () => {
             delay: 0.95,
             duration: .05,
         }, "pin5");
-    },[])
+    }, [])
 
     return (
         <>
